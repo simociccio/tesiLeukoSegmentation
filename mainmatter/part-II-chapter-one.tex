@@ -1,0 +1,30 @@
+
+\chapter{An overview about vector fields}
+
+Active contours, also called snakes, are curves that move inside the image following the energy of the field. There are two kinds of forces, one internal and anther external. Combining these two it's possible to create a curve that follows constraints gives by the forces. The  internal  and  external  forces  are  defined  so  that  the  snake  will conform to an object boundary or other desired features within an image. Snakes are widely used  in  many  applications,  including  edge  detection,  shape  modelling and segmentation. There  are  two  general  types  of  active  contour  models  in  the literature  today:  parametric active contours and geometric active contours. Typically,  the  curves  are  drawn  toward  the edges  by  potential  forces,  which  are  defined  to  be  the  negative  gradient  of  a  potential function.  Additional  forces,  such  as  pressure  forces,  together  with  the  potential  forces comprise the external forces. There are also internal forces designed to hold the curve together and to keep it from bending too  much.  There  are  two  levels  difficulties  with  active  contour  algorithms.  First,  the  initial contour must be close to the true boundary or else it will likely converge to the wrong result. The second problem is that active contours have difficulties progressing into concave  boundary  regions.  Although  many  methods  such  as  multi resolution  methods, pressure forces, distance potential forces, control points, and using solenoidal external fields have been proposed they either solve one problem or solve both but creating new difficulties. For  example,  multi resolution  methods  have  addressed  the  issue  of  initialization,  but specifying  how  the  snake  should  move  across  different  resolutions  remains  problematic. Another example is that of pressure forces, which can push an active contour into boundary concavities, but cannot be too strong or “weak” edges will be overwhelmed. But how works a snake if the objects to segment are overlapped? Snakes are able to find all the external edges of the object but in this case the edge can be consider an internal part of the object. With the active contours is impossible segment the overlapped cells because the snake cannot enter inside the cell region. For these reason we have used our virtual field following another lecture key.
+
+\section{Vector field convolution}
+Convolving a vector field with the edge of the map derived from the image you get an external force, the VFC. Active contours using the VFC external force are called VFC snakes. Like the GVF snakes instead of being Formulated using the standard energy minimization framework, VFC snakes are constructed from a state of equilibrium between the forces. The VFC snakes besides having a wide capture range and the ability to capture the concavities, are better resistant to noise image, have the ability to adapt the force field and reduce drastically the computational cost.
+Before to explain the VFC is right explain the vector field kernel
+\begin{equation}
+ k ( x,y ) =m(x,y)n(x,y)
+\end{equation}
+where n is the unit vector that points to the origin of the kernel	
+\begin{equation}
+n ( x,y ) = [\frac{-x}{r} , \frac{-y}{r} ]
+\end{equation}
+and m is the magnitude of the vector . The authors of the VFC implemented two kind of magnitude. If we consider the origin as the point of interest, this vector field kernel has the desirable property that a free particle placed in the field is able to move to the point of interest. The external force that work in the VFC is defined in this way:
+\begin{equation}
+{f} _{vfc} ( x,y ) = {u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)
+\end{equation}
+Since the map of the edge is non-negative and is wider near the edges of the image, the edges act to a greater extent on the VFC than homogeneous regions. Therefore, the free particles of homogeneous regions will be attracted to the edges. If we present the vector field kernel using a complex-valued range, the VFC is just the filtering result of the edge map, which does not depend on the origin of the kernel. The VFC field highly depends on the magnitude of the vector field kernel . Field VFC has the magnitude directly proportional to the vector field kernel (x, y). Knowing that the figure of interest has less influence on the particles away from it, the magnitude must be expressed as a positive function decreasing with respect to the distance of the origin. Below are propose two types of magnitude functions, given as
+\begin{equation}
+{m} _{1} ( x,y ) =(r+\epsilon) ^{-\gamma}
+\end{equation}
+\begin{equation}
+{m} _{2} ( x,y ) =exp(-r^{2}\, \zeta ^{2})
+\end{equation}
+where $\gamma$ and $\zeta$ are positive parameters to control the decrease, $\epsilon$ is a small positive constant to prevent division by zero at the origin. ${m} _{1} ( x,y )$ is inspired by Newton’s law  of universal gravitation in physics. Furthermore, the pixels in the edge map can be considered as objects of mass proportional to the strength of the edges and the field VFC would be the gravitational field generated by all objects. The influence of the figure of interest increases as $\gamma$ decreases. In practice $\gamma$ usually ranges from 1.5 to 3 for most images. ${m} _{2} ( x,y )$ is a Gaussian shape function, where $\zeta$ can be viewed as the standard deviation. The influence of the figure of interest increases as $\zeta$ increases. In general, the influence of the figure of interest should be increased (decrease or increase) as the signal-to-noise ratio is decreased.\cite{VFC}
+
+
+\section{New kind approach to segment leukocytes}

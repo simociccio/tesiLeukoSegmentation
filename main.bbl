@@ -1,0 +1,75 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{VFC}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bing~Li}{B.~L.}%
+     {Scott~T.}{S.~T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BLST1}
+  \strng{fullhash}{BLST1}
+  \field{sortinit}{B}
+  \field{title}{Active Contour External Force Using Vector Field Convolution
+  for Image Segmentation}
+  \field{journaltitle}{Acton}
+  \field{year}{2007}
+\endentry
+
+\entry{ann17}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Shubham~Manik}{S.~M.}%
+     {Nikhil~Vadera}{N.~V.}%
+     {}{}%
+     {Lalit Mohan~Saini}{L.~M.~S.}}%
+  }
+  \strng{namehash}{SMLMSNV1}
+  \strng{fullhash}{SMLMSNV1}
+  \field{sortinit}{S}
+  \field{title}{Counting and classification of white blood cell using
+  Artificial Neural Network (ANN)}
+  \field{journaltitle}{IEEE}
+  \field{year}{2017}
+\endentry
+
+\entry{website:wiki}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Wikipedia}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{sortinit}{W}
+  \field{title}{Blood}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Blood
+  \endverb
+  \field{year}{2007}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
