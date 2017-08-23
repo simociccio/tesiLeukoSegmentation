@@ -18,16 +18,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}New kind approach to segment leukocytes}{11}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendices}{13}{section*.3}
+\contentsline {section}{\numberline {2.3}The VFC result}{12}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix chapter}{15}{Appendix.1.A}
+\contentsline {section}{\numberline {2.4}External Force}{13}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Section}{15}{section.1.A.1}
+\contentsline {chapter}{Appendices}{15}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{17}{chapter*.4}
+\contentsline {chapter}{\numberline {A}Appendix chapter}{17}{Appendix.1.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{19}{chapter*.5}
+\contentsline {section}{\numberline {A.1}Section}{17}{section.1.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Listings}{21}{chapter*.6}
+\contentsline {chapter}{List of Figures}{19}{chapter*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{23}{chapter*.7}
+\contentsline {chapter}{List of Tables}{21}{chapter*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Listings}{23}{chapter*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{25}{chapter*.13}

@@ -28,3 +28,81 @@ where $\gamma$ and $\zeta$ are positive parameters to control the decrease, $\ep
 
 
 \section{New kind approach to segment leukocytes}
+As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest nonzero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{img/circlesEx.png}
+        \caption{ }
+        \label{fig:overlap}
+    \end{subfigure}
+     \quad
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{img/distancerTransform.png}
+        \caption{ }
+        \label{fig:overlaptransf}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{img/watershedEx.png}
+        \caption{ }
+        \label{fig:overlapwater}
+    \end{subfigure}
+    \caption{(a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result}\label{fig:stepswater}
+\end{figure}
+This is an ideal case to analize. But when we work with the overlapping between cells the result of the division by Watershed transform is not optimal like the example \ref{fig:stepswater}. Probably the cause derived from the low definition of the figures and especially the shape of the cells. Here there is an example of what happened when we try to divide 3 cells in overlap\ref{fig:exOnImage7}.
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{img/Im007_1_crop.png}
+        \caption{ }
+        \label{fig:origimage}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{img/waterTrRes.png}
+		\caption{ }
+		\label{fig:watershedoncells}
+	\end{subfigure}
+	\caption{(a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap}
+	\label{fig:exOnImage7}
+\end{figure}
+As is possible to see, this method produce a no-realistic separation of the cells.
+For this reason we study a different method that in automatic way produce a realistic division of the cells.
+The algorithm uses principally the output of the VFC field, the image relative to the External energy of the image to describe the edges, the median filter and the skeleton method.
+\section{The VFC result}
+The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)$ to describe the field of the image and it's magnitude. Our purpose is find and image using these two components that describes all the leukocytes edges taking an accurate look on the edges in overlap. The first step then is extract the right component and the left component.
+\begin{equation}
+{u} _{vfc}=ExtF(x)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
+\end{equation}
+\begin{equation}
+{u} _{vfc}=ExtF(y)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
+\end{equation}
+where ExtF is the External force of the field. Now we have only an intensity image, but to understand how the field moves in the space we have to transform these two component $ u$ and $ v $ in grades. It a mandatory do this step because we want to understand the direction of every pixel in the figure. Is possible convert the two components in degrees using the $atan2d$ function \ref{fig:angle}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/angle.png}
+		\caption{degrees image}
+		\label{fig:angle}
+	\end{center}
+\end{figure}
+In order to delete all the uniform part of the figure and put in exalt the edges we use a mediand filter using the function $ordfilt2$ searching the 18th element of the $5 * 5$ mask \ref{fig:Pmedangle}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/PmedAngle.png}
+		\caption{Median filter on degrees image}
+		\label{fig:Pmedangle}
+	\end{center}
+\end{figure}
+\section{External Force}
+As is possible to see in the result \ref{fig:angle}, there are a lot of points that are artefacts of the field. For these reason we used the $bwdist$ function to assign a number that it is the distance between each pixel and the nearest no-zero pixel of the image. This trick is very useful because reduce the entropy of the image, focusing only on the shape of the leukocytes \ref{fig:bwdistangle}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/bwdistAngle.png}
+		\caption{bwdist applied on degrees image}
+		\label{fig:bwdistangle}
+	\end{center}
+\end{figure}
