@@ -2,7 +2,7 @@
 \chapter{An overview about vector fields}
 
 Active contours, also called snakes, are curves that move inside the image following the energy of the field. There are two kinds of forces, one internal and anther external. Combining these two it's possible to create a curve that follows constraints gives by the forces. The  internal  and  external  forces  are  defined  so  that  the  snake  will conform to an object boundary or other desired features within an image. Snakes are widely used  in  many  applications,  including  edge  detection,  shape  modelling and segmentation. There  are  two  general  types  of  active  contour  models  in  the literature  today:  parametric active contours and geometric active contours. Typically,  the  curves  are  drawn  toward  the edges  by  potential  forces,  which  are  defined  to  be  the  negative  gradient  of  a  potential function.  Additional  forces,  such  as  pressure  forces,  together  with  the  potential  forces comprise the external forces. There are also internal forces designed to hold the curve together and to keep it from bending too  much.  There  are  two  levels  difficulties  with  active  contour  algorithms.  First,  the  initial contour must be close to the true boundary or else it will likely converge to the wrong result. The second problem is that active contours have difficulties progressing into concave  boundary  regions.  Although  many  methods  such  as  multi resolution  methods, pressure forces, distance potential forces, control points, and using solenoidal external fields have been proposed they either solve one problem or solve both but creating new difficulties. For  example,  multi resolution  methods  have  addressed  the  issue  of  initialization,  but specifying  how  the  snake  should  move  across  different  resolutions  remains  problematic. Another example is that of pressure forces, which can push an active contour into boundary concavities, but cannot be too strong or “weak” edges will be overwhelmed. But how works a snake if the objects to segment are overlapped? Snakes are able to find all the external edges of the object but in this case the edge can be consider an internal part of the object. With the active contours is impossible segment the overlapped cells because the snake cannot enter inside the cell region. For these reason we have used our virtual field following another lecture key.
-
+\chapter{The implementation}
 \section{Vector field convolution}
 Convolving a vector field with the edge of the map derived from the image you get an external force, the VFC. Active contours using the VFC external force are called VFC snakes. Like the GVF snakes instead of being Formulated using the standard energy minimization framework, VFC snakes are constructed from a state of equilibrium between the forces. The VFC snakes besides having a wide capture range and the ability to capture the concavities, are better resistant to noise image, have the ability to adapt the force field and reduce drastically the computational cost.
 Before to explain the VFC is right explain the vector field kernel
@@ -96,8 +96,8 @@ In order to delete all the uniform part of the figure and put in exalt the edges
 		\label{fig:Pmedangle}
 	\end{center}
 \end{figure}
-\section{External Force}
-As is possible to see in the result \ref{fig:angle}, there are a lot of points that are artefacts of the field. For these reason we used the $bwdist$ function to assign a number that it is the distance between each pixel and the nearest no-zero pixel of the image. This trick is very useful because reduce the entropy of the image, focusing only on the shape of the leukocytes \ref{fig:bwdistangle}.
+\section{External Energy}
+As is possible to see in the result \ref{fig:angle}, there are a lot of points that are artefacts created by the field. For these reason we used the $bwdist$ function to assign a number that it is the distance between each pixel and the nearest no-zero pixel of the image. This trick is very useful because reduce the entropy of the image, focusing only on the shape of the leukocytes \ref{fig:bwdistangle}.
 \begin{figure}
 	\begin{center}
 		\centering
@@ -106,3 +106,80 @@ As is possible to see in the result \ref{fig:angle}, there are a lot of points t
 		\label{fig:bwdistangle}
 	\end{center}
 \end{figure}
+But we have ever the same problem. in the image there are trace of the red blood cells, then we had to find a method to isolate only the leukocytes. We started using the external energy of the image. For an image $I(x,y)$ all the lines, edges and terminal points the general formulation of the Energy of the image is
+\begin{equation}
+ E_{image}=w_{line}E_{line} + w_{edge}E_{edge} + w_{term}E_{term}
+\end{equation}
+where $w_{line}, w_{edge}, w_{term}$ are weights of the features.
+
+\subsection{Line functional}
+The line functional or in other terms the intensity of the image is in a nutshell the attracted value of the dark lines to the light line. It's possible choose this attraction putting a positive or negative sign before the force that this attraction has to be.
+\begin{equation}
+	E_{{line}}=filter(I(x,y))
+\end{equation}
+
+\subsection{Edge functional}
+The edge functional bases it's work on the image gradient.
+\begin{equation}
+E_{{edge}}=-\left|\nabla I(x,y)\right\vert ^{2}
+\end{equation}
+It's very useful because when we try to analyse the feature of the image, we work with maxims and minims. with this formula we can avoid the local minima that are not object of interest. The energy functional using scale space continuation is
+\begin{equation}
+E_{edge}=-\left|G_{\sigma }*\nabla ^{2}I\right\vert ^{2}
+\end{equation}
+
+where $ G_{\sigma } $ is a Gaussian with standard deviation $ \sigma $.
+
+\subsection{Termination functional}
+The curvature of the lines in a image is utilized to detect corners and terminations. Put 
+\begin{equation}
+C(x,y)=G_{{\sigma }}*I(x,y)
+\end{equation}
+with a gradient angle
+\begin{equation}
+\theta =\arctan {\Bigg (}{\frac  {C_{y}}{C_{x}}}{\Bigg )},
+\end{equation}
+unit vectors that move along the gradient direction 
+\begin{equation}
+{\mathbf  n}=(\cos \theta ,\sin \theta )
+\end{equation}
+and unit vectors perpendicular to the gradient direction
+\begin{equation}
+{\mathbf  n}_{{\perp }}=(-\sin \theta ,\cos \theta ).
+\end{equation}
+With these 4 equations we can describe the termination functional of energy as follow
+\begin{equation}
+E_{{term}}={\partial \theta  \over \partial n_{{\perp }}}={\partial ^{2}C/\partial ^{2}n_{{\perp }} \over \partial C/\partial n}={{C_{{yy}}C_{x}^{2}-2C_{{xy}}C_{x}C_{y}+C_{{xx}}C_{y}^{2}} \over (C_{x}^{2}+C_{y}^{2})^{{3/2}}}
+\end{equation}
+
+\subsection{External energy result}
+Now we have only to specify the value of each parameter explained above.
+To obtain the desired outcome we did some empirical experiments, obtaining the best result with $ Wedge=8, Wline=-8 and Wterm=0$. this result \ref{fig:Eextforce} permit us to extract only the leukocytes part of the image using some analysis image exploit \ref{fig:onlyleu}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/Eext.png}
+		\caption{External energy result}
+		\label{fig:Eextforce}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/onlyleuco.png}
+		\caption{image of leukocytes without red blood cells}
+		\label{fig:onlyleu}
+	\end{center}
+\end{figure}
+In order to delete all the uniform part of the figure and put in exalt the edges we use a mediand filter using the function $ordfilt2$ searching the 18th element of the $5 * 5$ mask \ref{fig:Pmedonlyleu}.
+
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/Pmedonlyleuko.png}
+		\caption{edges and region of leukocytes}
+		\label{fig:Pmedonlyleu}
+	\end{center}
+\end{figure}
+\section{Combination of two results: division method}

@@ -10,28 +10,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Section}{5}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}A title to summarize your contribution}{7}{part.2}
+\contentsline {part}{II\hspace {1em}A parallel way of using VFC without using active contours}{7}{part.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}An overview about vector fields}{9}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Vector field convolution}{10}{section.2.1}
+\contentsline {chapter}{\numberline {3}The implementation}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}New kind approach to segment leukocytes}{11}{section.2.2}
+\contentsline {section}{\numberline {3.1}Vector field convolution}{11}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}The VFC result}{12}{section.2.3}
+\contentsline {section}{\numberline {3.2}New kind approach to segment leukocytes}{12}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}External Force}{13}{section.2.4}
+\contentsline {section}{\numberline {3.3}The VFC result}{13}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendices}{15}{section*.9}
+\contentsline {section}{\numberline {3.4}External Energy}{15}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix chapter}{17}{Appendix.1.A}
+\contentsline {subsection}{\numberline {3.4.1}Line functional}{15}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Section}{17}{section.1.A.1}
+\contentsline {subsection}{\numberline {3.4.2}Edge functional}{15}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{19}{chapter*.10}
+\contentsline {subsection}{\numberline {3.4.3}Termination functional}{16}{subsection.3.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{21}{chapter*.11}
+\contentsline {subsection}{\numberline {3.4.4}External energy result}{16}{subsection.3.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Listings}{23}{chapter*.12}
+\contentsline {section}{\numberline {3.5}Combination of two results}{16}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{25}{chapter*.13}
+\contentsline {chapter}{Appendices}{19}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Appendix chapter}{21}{Appendix.1.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Section}{21}{section.1.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{23}{chapter*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{25}{chapter*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Listings}{27}{chapter*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{29}{chapter*.16}
