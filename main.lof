@@ -8,22 +8,32 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces (a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result\relax }}{11}{figure.caption.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces (a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result\relax }}{13}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces (a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap\relax }}{12}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces (a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap\relax }}{13}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces degrees image\relax }}{13}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces degrees image\relax }}{14}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Median filter on degrees image\relax }}{13}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Median filter on degrees image\relax }}{14}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces bwdist applied on degrees image\relax }}{14}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces bwdist applied on degrees image\relax }}{15}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces External energy result\relax }}{16}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces External energy result\relax }}{17}{figure.caption.9}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces image of leukocytes without red blood cells\relax }}{16}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces image of leukocytes without red blood cells\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces edges and region of leukocytes\relax }}{16}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces edges and region of leukocytes\relax }}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces overlay of figures \ref {fig:Pmedangle} and \ref {fig:Pmedonlyleu}\relax }}{17}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces only leukocytes edges\relax }}{17}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces skeleton of leukocytes with irregular branches\relax }}{18}{figure.caption.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces skeleton of leukocytes with no spurious branches\relax }}{19}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces final leukocytes segmentation \relax }}{19}{figure.caption.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces (a) All the regions, (b) Only big regions\relax }}{20}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

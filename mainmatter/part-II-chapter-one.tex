@@ -1,7 +1,4 @@
 
-\chapter{An overview about vector fields}
-
-Active contours, also called snakes, are curves that move inside the image following the energy of the field. There are two kinds of forces, one internal and anther external. Combining these two it's possible to create a curve that follows constraints gives by the forces. The  internal  and  external  forces  are  defined  so  that  the  snake  will conform to an object boundary or other desired features within an image. Snakes are widely used  in  many  applications,  including  edge  detection,  shape  modelling and segmentation. There  are  two  general  types  of  active  contour  models  in  the literature  today:  parametric active contours and geometric active contours. Typically,  the  curves  are  drawn  toward  the edges  by  potential  forces,  which  are  defined  to  be  the  negative  gradient  of  a  potential function.  Additional  forces,  such  as  pressure  forces,  together  with  the  potential  forces comprise the external forces. There are also internal forces designed to hold the curve together and to keep it from bending too  much.  There  are  two  levels  difficulties  with  active  contour  algorithms.  First,  the  initial contour must be close to the true boundary or else it will likely converge to the wrong result. The second problem is that active contours have difficulties progressing into concave  boundary  regions.  Although  many  methods  such  as  multi resolution  methods, pressure forces, distance potential forces, control points, and using solenoidal external fields have been proposed they either solve one problem or solve both but creating new difficulties. For  example,  multi resolution  methods  have  addressed  the  issue  of  initialization,  but specifying  how  the  snake  should  move  across  different  resolutions  remains  problematic. Another example is that of pressure forces, which can push an active contour into boundary concavities, but cannot be too strong or “weak” edges will be overwhelmed. But how works a snake if the objects to segment are overlapped? Snakes are able to find all the external edges of the object but in this case the edge can be consider an internal part of the object. With the active contours is impossible segment the overlapped cells because the snake cannot enter inside the cell region. For these reason we have used our virtual field following another lecture key.
 \chapter{The implementation}
 \section{Vector field convolution}
 Convolving a vector field with the edge of the map derived from the image you get an external force, the VFC. Active contours using the VFC external force are called VFC snakes. Like the GVF snakes instead of being Formulated using the standard energy minimization framework, VFC snakes are constructed from a state of equilibrium between the forces. The VFC snakes besides having a wide capture range and the ability to capture the concavities, are better resistant to noise image, have the ability to adapt the force field and reduce drastically the computational cost.
@@ -31,20 +28,20 @@ where $\gamma$ and $\zeta$ are positive parameters to control the decrease, $\ep
 As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest nonzero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{img/circlesEx.png}
         \caption{ }
         \label{fig:overlap}
     \end{subfigure}
      \quad
       %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{img/distancerTransform.png}
         \caption{ }
         \label{fig:overlaptransf}
     \end{subfigure}
     \quad
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{img/watershedEx.png}
         \caption{ }
         \label{fig:overlapwater}
@@ -54,12 +51,12 @@ As we can see in literature, the main approach used to resolve the overlap probl
 This is an ideal case to analize. But when we work with the overlapping between cells the result of the division by Watershed transform is not optimal like the example \ref{fig:stepswater}. Probably the cause derived from the low definition of the figures and especially the shape of the cells. Here there is an example of what happened when we try to divide 3 cells in overlap\ref{fig:exOnImage7}.
 \begin{figure}
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{img/Im007_1_crop.png}
         \caption{ }
         \label{fig:origimage}
     \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
 		\includegraphics[width=\textwidth]{img/waterTrRes.png}
 		\caption{ }
 		\label{fig:watershedoncells}
@@ -182,4 +179,102 @@ In order to delete all the uniform part of the figure and put in exalt the edges
 		\label{fig:Pmedonlyleu}
 	\end{center}
 \end{figure}
-\section{Combination of two results: division method}
+\section{Combination of two results: the division method}
+The two result that we obtained seems in no-correlation, but the skill of this segmentation live in this passage. Using the overlay function we search all the points in overlay between the images \ref{fig:Pmedangle} and \ref{fig:Pmedonlyleu}, using the red color to isolate the leukocytes region \ref{fig:over}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/overlay.png}
+		\caption{overlay of figures \ref{fig:Pmedangle} and \ref{fig:Pmedonlyleu}}
+		\label{fig:over}
+	\end{center}
+\end{figure}
+We choose to use the red color, because if we isolating only the red component of the image we can obtain an image that contains only the leukocytes regions. The result of this task is visible in the image \ref{fig:leukoover} 
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/overLeuko.png}
+		\caption{only leukocytes edges}
+		\label{fig:leukoover}
+	\end{center}
+\end{figure}
+
+\section{Segmentation with the skeleton function}
+Starting from the image \ref{fig:leukoover} we have to connect every single white point to the nearest. To do this task we use the function $imdilate$ to dilate all the white dots with a diamond structural element with the size of 6 pixels. after this step we apply the closing of the opening with two disk respectively of the size 3 and 4 pixels. Now we can apply the skeleton function or the thinning of the edges. To do this passage we use the Matlab function $bwmorph$ that it's not the best function to do this but is the faster one. We try another skeleton external function written by N. Howe that is very interesting because has a precision to compute the skeleton of the image that is very impressive, but because the Pc latency we can't use the last one function. After the skeleton application we obtain an image that contains some spurious branches \ref{fig:skel}. 
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/skel.png}
+		\caption{skeleton of leukocytes with irregular branches}
+		\label{fig:skel}
+	\end{center}
+\end{figure}
+To solve this problem is possible to use the Matlab function $bwmorph$ to prune the spurious branches, but in this case the function doesn’t work very well. For this reason we implement a code to resolve the problem. Our code is like a parser that for each point it's see if it is a part of a close circle or not. If it's not a part of a loop the code deletes this point. In a nutshell we save only the point that stay in a 'road' with the starting point and the end point coincident. Below you can read a snippet of pruning code.
+\begin{scriptsize}
+	\begin{lstlisting} [frame=single]
+B = branchpoints;
+E = endpoints;
+[y,x] = Image;
+Dmask = false(size(skel));
+	for k = 1:numel(x)
+    	D = bwdistgeodesic(skel,x(k),y(k));
+    	distanceToBranchPt = min(D(B));
+    	Dmask(D < distanceToBranchPt) =true;
+	end
+skelD = skel - Dmask;
+	\end{lstlisting}
+\end{scriptsize}
+
+The result that we obtain from the skeleton application is a summary work, indeed we obtain an over-segmentation as is viewable from the image \ref{fig:skelfin}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/skelfin.png}
+		\caption{skeleton of leukocytes with no spurious branches}
+		\label{fig:skelfin}
+	\end{center}
+\end{figure}
+This over-segmentation isn't good for the correct visualization of leukocytes, but gives us a starting point to improve the solution and to obtain a better result.
+Then we try to combine the various result to obtain a segmentation that was similar to the original image. First of all we close all the holes that are inside the image, to obtain a sort of black and white mask. Another fundamental step is sum the skeleton image with the mask. Doing this step we can separate the foreground by the background. Now we can use for the last time the map of edges that we used to calculate the VFC field. We use it summarizing it with the image of leukocytes in foreground and passing this image sum as input to the function $bwareafilt$. We do this because this function extracts all connected components (objects)
+from a binary image where the area is in range, producing the segmented image of the leukocytes \ref{fig:bwarea}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.3]{img/segmentation.png}
+		\caption{final leukocytes segmentation }
+		\label{fig:bwarea}
+	\end{center}
+\end{figure}
+\section{Cells counting}
+To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but it's easy to overtake this problem without consider the little regions that are inside the image. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
+\begin{scriptsize}
+	\begin{lstlisting} [frame=single]
+CC = bwconncomp(BW2,8);
+numPixels = cellfun(@numel,CC.PixelIdxList);
+[~,idx] = min(numPixels);
+
+while min(numPixels)<2000
+    BW2(CC.PixelIdxList{idx}) = 0;
+    CC = bwconncomp(BW2,8);
+    numPixels = cellfun(@numel,CC.PixelIdxList);
+    [~,idx] = min(numPixels);
+end
+[labeledImage, numberOfObject] = bwlabel(BW2);
+	\end{lstlisting}
+\end{scriptsize}
+The resulting image of this consider only the the regions that are the same size of the nucleus or bigger.
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.6\textwidth}
+        \includegraphics[width=\textwidth]{img/celluleConCito.png}
+        \caption{ }
+        \label{fig:alltheregions}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[width=\textwidth]{img/conteggioNuclei(noWatersheed).png}
+		\caption{ }
+		\label{fig:onlybigregions}
+	\end{subfigure}
+	\caption{(a) All the regions, (b) Only big regions}
+	\label{fig:counting}
+\end{figure}
