@@ -2,48 +2,56 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Introduction}{1}{chapter*.2}
+\contentsline {chapter}{Introduction}{1}{chapter*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Background}{3}{part.1}
+\contentsline {part}{I\hspace {1em}Background}{5}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}An overview about vector fields}{5}{chapter.1}
+\contentsline {chapter}{\numberline {1}Overview about vector fields and segmentation techniques}{7}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}A parallel way of using VFC without using active contours}{7}{part.2}
+\contentsline {section}{\numberline {1.1}The vector field}{7}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}The implementation}{9}{chapter.2}
+\contentsline {section}{\numberline {1.2}An overview of Image Segmentation methods}{9}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Vector field convolution}{9}{section.2.1}
+\contentsline {subsection}{\numberline {1.2.1}threshold-based techniques}{9}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}New kind approach to segment leukocytes}{10}{section.2.2}
+\contentsline {subsection}{\numberline {1.2.2}Histogram-based techniques}{10}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}The VFC result}{12}{section.2.3}
+\contentsline {part}{II\hspace {1em}A parallel way of using VFC without using active contours}{11}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}External Energy}{12}{section.2.4}
+\contentsline {chapter}{\numberline {2}The implementation}{13}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Line functional}{14}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.1}Vector field convolution}{13}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Edge functional}{14}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.2}New kind approach to segment leukocytes}{14}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Termination functional}{15}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.3}The VFC result}{16}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}External energy result}{15}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.4}External Energy}{16}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Combination of two results: the division method}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.4.1}Line functional}{18}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Segmentation with the skeleton function}{18}{section.2.6}
+\contentsline {subsection}{\numberline {2.4.2}Edge functional}{18}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Cells counting}{19}{section.2.7}
+\contentsline {subsection}{\numberline {2.4.3}Termination functional}{19}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendices}{21}{section*.18}
+\contentsline {subsection}{\numberline {2.4.4}External energy result}{19}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix chapter}{23}{Appendix.1.A}
+\contentsline {section}{\numberline {2.5}Combination of two results: the division method}{21}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Section}{23}{section.1.A.1}
+\contentsline {section}{\numberline {2.6}Segmentation with the skeleton function}{22}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{25}{chapter*.19}
+\contentsline {section}{\numberline {2.7}Cells counting}{23}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{27}{chapter*.20}
+\contentsline {part}{III\hspace {1em}Results and conclusions}{25}{part.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Listings}{29}{chapter*.21}
+\contentsline {chapter}{\numberline {3}Experimental results and conclusions}{27}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{31}{chapter*.22}
+\contentsline {section}{\numberline {3.1}Results}{27}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{29}{chapter*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{31}{chapter*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Listings}{33}{chapter*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{35}{chapter*.23}

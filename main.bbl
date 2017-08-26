@@ -33,6 +33,22 @@
   \field{year}{2007}
 \endentry
 
+\entry{Threshold}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {R.~C.~Gonzales}{R.~C.~G.}%
+     {R.~E.~Woods}{R.~E.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RCGREW1}
+  \strng{fullhash}{RCGREW1}
+  \field{sortinit}{R}
+  \field{title}{”Digital Image Processing.”}
+  \field{journaltitle}{2nd ed. New Jersey: Prentice Hall, Inc.}
+  \field{year}{2002.}
+\endentry
+
 \entry{ann17}{article}{}
   \name{author}{1}{}{%
     {{}%
