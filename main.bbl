@@ -66,6 +66,22 @@
   \field{year}{2017}
 \endentry
 
+\entry{edge}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Umbaugh}{U.}%
+     {Scott~E.}{S.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{USE1}
+  \strng{fullhash}{USE1}
+  \field{sortinit}{U}
+  \field{title}{Digital image processing and analysis : human and computer
+  vision applications with CVIPtools (2nd ed.)}
+  \field{year}{2010}
+\endentry
+
 \entry{website:wiki}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -82,6 +98,25 @@
   \verb https://en.wikipedia.org/wiki/Blood
   \endverb
   \field{year}{2007}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
+\entry{website:region_g}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Wikipedia}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W1}
+  \strng{fullhash}{W1}
+  \field{sortinit}{W}
+  \field{title}{Region growing}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Region_growing
+  \endverb
+  \field{year}{2008}
   \warn{\item Invalid format of field 'month'}
 \endentry
 

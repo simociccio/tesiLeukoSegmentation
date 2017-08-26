@@ -1,6 +1,12 @@
 
 \chapter{The implementation}
+\section{Mean shift}
+
 \section{Vector field convolution}
+The Vector field convolution is a sanke external force created by Bing Li and S.T. Acton.
+
+\bigskip
+
 Convolving a vector field with the edge of the map derived from the image you get an external force, the VFC. Active contours using the VFC external force are called VFC snakes. Like the GVF snakes instead of being Formulated using the standard energy minimization framework, VFC snakes are constructed from a state of equilibrium between the forces. The VFC snakes besides having a wide capture range and the ability to capture the concavities, are better resistant to noise image, have the ability to adapt the force field and reduce drastically the computational cost.
 Before to explain the VFC is right explain the vector field kernel
 \begin{equation}
@@ -25,7 +31,7 @@ where $\gamma$ and $\zeta$ are positive parameters to control the decrease, $\ep
 
 
 \section{New kind approach to segment leukocytes}
-As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest nonzero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
+As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
@@ -48,7 +54,7 @@ As we can see in literature, the main approach used to resolve the overlap probl
     \end{subfigure}
     \caption{(a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result}\label{fig:stepswater}
 \end{figure}
-This is an ideal case to analize. But when we work with the overlapping between cells the result of the division by Watershed transform is not optimal like the example \ref{fig:stepswater}. Probably the cause derived from the low definition of the figures and especially the shape of the cells. Here there is an example of what happened when we try to divide 3 cells in overlap\ref{fig:exOnImage7}.
+This is an ideal case to analyse. But when we work with the overlapping between cells the result of the division by Watershed transform is not optimal like the example \ref{fig:stepswater}. Probably the cause derived from the low definition of the figures and especially the shape of the cells. Here there is an example of what happened when we try to divide 3 cells in overlap\ref{fig:exOnImage7}.
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -64,9 +70,7 @@ This is an ideal case to analize. But when we work with the overlapping between 
 	\caption{(a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap}
 	\label{fig:exOnImage7}
 \end{figure}
-As is possible to see, this method produce a no-realistic separation of the cells.
-For this reason we study a different method that in automatic way produce a realistic division of the cells.
-The algorithm uses principally the output of the VFC field, the image relative to the External energy of the image to describe the edges, the median filter and the skeleton method.
+As is possible to see, this method produce a no-realistic separation of the cells. For this reason we study a different method that in automatic way produce a realistic division of the cells. The algorithm uses principally the output of the VFC field, the image relative to the External energy of the image to describe the edges, the median filter and the skeleton method.
 \section{The VFC result}
 The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)$ to describe the field of the image and it's magnitude. Our purpose is find and image using these two components that describes all the leukocytes edges taking an accurate look on the edges in overlap. The first step then is extract the right component and the left component.
 \begin{equation}
