@@ -1,2 +1,90 @@
 \chapter{Experimental results and conclusions}
 \section{Results}
+Our propose in a nutshell is a new substitutive method of Watershed transform. The following results are obtained using an Acer Aspire E1 laptop with 8 gb of RAM. the figure \ref{fig:alltheprocess} show all the process starting from the gray scale image to the mask used to find only the leukocytes.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure1.png}
+        \caption{ }
+        \label{fig:fig1}
+    \end{subfigure}
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure2.png}
+        \caption{ }
+        \label{fig:fig}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure3.png}
+        \caption{ }
+        \label{fig:fig3}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure4.png}
+        \caption{ }
+        \label{fig:fig4}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure5.png}
+        \caption{ }
+        \label{fig:fig5}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure6.png}
+        \caption{ }
+        \label{fig:fig6}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/final/figure7.png}
+        \caption{ }
+        \label{fig:fig7}
+    \end{subfigure}
+
+    
+    \caption{(a) Mean shift result in gray scale,(b) VFC u and v components,(c) Distance transform on grades image, (d) External force image, (e) overlay of two results, (f) Opening of initial edge image, (g) Leukocytes mask}
+    \label{fig:alltheprocess}
+\end{figure}
+The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the segmentation
+
+\begin{figure}
+\centering
+	\begin{center}
+		\includegraphics[width=\textwidth]{img/final/figure8.png}
+		\caption{skeleton segmentation}
+		\label{fig:fig8}
+	\end{center}
+\end{figure}
+\begin{figure}
+\centering
+	\begin{center}
+		\includegraphics[width=\textwidth]{img/final/figure9.png}
+		\caption{Removing of little area to count the number of leukocytes}
+		\label{fig:fig9}
+	\end{center}
+\end{figure}
+\bigskip
+
+As it possible to see, between the two images there are some differences. the first one is, removing the small areas by the image we are going to lose the element on the right of the image. This is happened because it was artefact caused by the Giemsa stain method, then is obvious that it's not well segmented because under the stain is not present  leukocyte. The result of the counting in this case is 29. The algorithm fails the result because two leukocytes have a visualization problem and inside the nuclei have a line that divide in tow sides the cells.
+Working with cropped images we obtain a better result because we have to analyse less cells and as a consequence we have an increase of the speed as is explained in the table \ref{statistics}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline 
+name & cropped & time & Number of recognized cells / number of real cells\\ 
+\hline 
+image 5 & no & 45.050214 & 28/26\\ 
+\hline 
+image 5 & yes & 2.214306 & 7/7\\ 
+\hline 
+image 13 & no & 31.827737 & 11/11 \\ 
+\hline 
+image 13 & yes & 1.189616 & 4/4 \\ 
+\hline 
+image 18 & no & 31.493120 & 18/17\\ 
+\hline 
+image 18 & yes & 1.717642 & 3/3 \\ 
+\hline 
+\end{tabular} 
+\caption{result statistics}
+\label{statistics}
+\end{table}

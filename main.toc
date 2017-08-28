@@ -40,38 +40,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}New kind approach to segment leukocytes}{23}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}ALL-IDB blood cell dataset}{23}{section.4.2}
+\contentsline {section}{\numberline {4.2}ALL-IDB blood cell dataset}{24}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Mean shift application}{26}{section.4.3}
+\contentsline {section}{\numberline {4.3}Mean shift application}{27}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}The VFC result}{26}{section.4.4}
+\contentsline {section}{\numberline {4.4}The VFC result}{27}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}External Energy}{26}{section.4.5}
+\contentsline {section}{\numberline {4.5}External Energy}{27}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Line functional}{28}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.1}Line functional}{29}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}Edge functional}{28}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.2}Edge functional}{29}{subsection.4.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.3}Termination functional}{29}{subsection.4.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.4}External energy result}{29}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.4}External energy result}{30}{subsection.4.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Combination of two results: the division method}{31}{section.4.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.7}Segmentation with the skeleton function}{32}{section.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Cells counting}{33}{section.4.8}
+\contentsline {section}{\numberline {4.8}Cells counting}{34}{section.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Results and conclusions}{35}{part.5}
+\contentsline {part}{V\hspace {1em}Results and conclusions}{37}{part.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Experimental results and conclusions}{37}{chapter.5}
+\contentsline {chapter}{\numberline {5}Experimental results and conclusions}{39}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Results}{37}{section.5.1}
+\contentsline {section}{\numberline {5.1}Results}{39}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{39}{chapter*.21}
+\contentsline {chapter}{List of Figures}{43}{chapter*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{41}{chapter*.22}
+\contentsline {chapter}{List of Tables}{45}{chapter*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Listings}{43}{chapter*.23}
+\contentsline {chapter}{List of Listings}{47}{chapter*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{45}{chapter*.24}
+\contentsline {chapter}{Bibliography}{49}{chapter*.29}

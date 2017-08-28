@@ -14,32 +14,40 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces (a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result\relax }}{24}{figure.caption.6}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Method diagram representation\relax }}{24}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces (a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap\relax }}{25}{figure.caption.7}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces (a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result\relax }}{25}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces degrees image\relax }}{27}{figure.caption.9}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces (a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap\relax }}{26}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Median filter on degrees image\relax }}{27}{figure.caption.10}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces degrees image\relax }}{28}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces bwdist applied on degrees image\relax }}{28}{figure.caption.11}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Median filter on degrees image\relax }}{28}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces External energy result\relax }}{30}{figure.caption.12}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces bwdist applied on degrees image\relax }}{28}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces image of leukocytes without red blood cells\relax }}{30}{figure.caption.13}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces External energy result\relax }}{30}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces edges and region of leukocytes\relax }}{30}{figure.caption.14}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces image of leukocytes without red blood cells\relax }}{30}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces overlay of figures \ref {fig:Pmedangle} and \ref {fig:Pmedonlyleu}\relax }}{31}{figure.caption.15}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces edges and region of leukocytes\relax }}{31}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces only leukocytes edges\relax }}{31}{figure.caption.16}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces overlay of figures \ref {fig:Pmedangle} and \ref {fig:Pmedonlyleu}\relax }}{31}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces skeleton of leukocytes with irregular branches\relax }}{32}{figure.caption.17}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces only leukocytes edges\relax }}{32}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces skeleton of leukocytes with no spurious branches\relax }}{33}{figure.caption.18}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces skeleton of leukocytes with irregular branches\relax }}{33}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces final leukocytes segmentation \relax }}{33}{figure.caption.19}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces skeleton of leukocytes with no spurious branches\relax }}{33}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces (a) All the regions, (b) Only big regions\relax }}{34}{figure.caption.20}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces final leukocytes segmentation \relax }}{34}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces (a) All the regions, (b) Only big regions\relax }}{35}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Mean shift result in gray scale,(b) VFC u and v components,(c) Distance transform on grades image, (d) External force image, (e) overlay of two results, (f) Opening of initial edge image, (g) Leukocytes mask\relax }}{40}{figure.caption.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces skeleton segmentation\relax }}{41}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Removing of little area to count the number of leukocytes\relax }}{41}{figure.caption.24}

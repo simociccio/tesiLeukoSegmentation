@@ -1,4 +1,13 @@
 \chapter{The implementation}
+For the implementation we followed the approach shows in the figure \ref{fig:diag}
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/diag.png}
+		\caption{Method diagram representation}
+		\label{fig:diag}
+	\end{center}
+\end{figure}
 
 \section{New kind approach to segment leukocytes}
 As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
