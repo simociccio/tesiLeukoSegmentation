@@ -72,7 +72,7 @@ Working with cropped images we obtain a better result because we have to analyse
 \hline 
 name & cropped & time & Number of recognized cells / number of real cells\\ 
 \hline 
-image 5 & no & 45.050214 & 28/26\\ 
+image 5 & no & 45.050214 & 29/27\\ 
 \hline 
 image 5 & yes & 2.214306 & 7/7\\ 
 \hline 
@@ -85,6 +85,41 @@ image 18 & no & 31.493120 & 18/17\\
 image 18 & yes & 1.717642 & 3/3 \\ 
 \hline 
 \end{tabular} 
-\caption{result statistics}
+\caption{Statistics result}
 \label{statistics}
 \end{table}
+
+\section{Conclusions and future works}
+The dissertation proposed an innovative white blood cell recognition and segmentation. It was implemented using some notions already known in literature but never applied in this field. Combining them we obtain a new innovative method in which the major innovation is the use of the Vector field convolution in union to the mean shift and the skeleton function to obtain a result better of the watershed.
+
+\bigskip
+
+The algorithm obtains good results where we analyse images where is not present the granulocyte, because the shape of it's nucleus produce a lot of over-segmentation.\ref{fig:grangray}\ref{fig:gran}
+\begin{figure}
+\begin{center}
+		\includegraphics[scale=0.5]{img/final/meangran.png}
+		\caption{Granulocite after Mean shift application}
+		\label{fig:grangray}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+		\includegraphics[scale=0.5]{img/final/fingran.png}
+		\caption{Over-segmentation caused by the granulocyte}
+		\label{fig:gran}
+\end{center}
+\end{figure}
+
+The most important points that we focused in this thesis can be summarized in four sections:
+\begin{enumerate}
+\item preprocessing using the mean shift algorithm in order to delete all the differences of colour inside the cells
+\item extrapolation of the right and left component of the VFC force
+\item application of the skeleton in order to separate the overlapped cells
+\item recognize and count of the cells
+\end{enumerate}
+
+\bigskip
+
+Our method demonstrate that at this moment is better than everyone algorithm existing in literature. The only problem is the less robustness causing by the low quality images and the over-segmentation caused by the granulocytes. But as the literature says, this is the complex field in image histologic segmentation.
+
+But is possible to resolve this robustness problem. As future works we want to implement a new kind of region linking in order to delete all the over-segmentation and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components.
