@@ -7,24 +7,30 @@
 \BOOKMARK [2][-]{subsection.1.2.2}{Histogram-based techniques}{section.1.2}% 7
 \BOOKMARK [2][-]{subsection.1.2.3}{Edge detection technique}{section.1.2}% 8
 \BOOKMARK [2][-]{subsection.1.2.4}{Watershed technique}{section.1.2}% 9
-\BOOKMARK [-1][-]{part.2}{II A parallel way of using VFC without using active contours}{}% 10
-\BOOKMARK [0][-]{chapter.2}{The implementation}{part.2}% 11
-\BOOKMARK [1][-]{section.2.1}{Mean shift}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{Vector field convolution}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.3}{New kind approach to segment leukocytes}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.4}{The VFC result}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.5}{External Energy}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.5.1}{Line functional}{section.2.5}% 17
-\BOOKMARK [2][-]{subsection.2.5.2}{Edge functional}{section.2.5}% 18
-\BOOKMARK [2][-]{subsection.2.5.3}{Termination functional}{section.2.5}% 19
-\BOOKMARK [2][-]{subsection.2.5.4}{External energy result}{section.2.5}% 20
-\BOOKMARK [1][-]{section.2.6}{Combination of two results: the division method}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.7}{Segmentation with the skeleton function}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.8}{Cells counting}{chapter.2}% 23
-\BOOKMARK [-1][-]{part.3}{III Results and conclusions}{}% 24
-\BOOKMARK [0][-]{chapter.3}{Experimental results and conclusions}{part.3}% 25
-\BOOKMARK [1][-]{section.3.1}{Results}{chapter.3}% 26
-\BOOKMARK [0][-]{chapter*.20}{List of Figures}{part.3}% 27
-\BOOKMARK [0][-]{chapter*.21}{List of Tables}{part.3}% 28
-\BOOKMARK [0][-]{chapter*.22}{List of Listings}{part.3}% 29
-\BOOKMARK [0][-]{chapter*.23}{Bibliography}{part.3}% 30
+\BOOKMARK [-1][-]{part.2}{II Mean Shift}{}% 10
+\BOOKMARK [0][-]{chapter.2}{Mean shift}{part.2}% 11
+\BOOKMARK [1][-]{section.2.1}{Mean shift kernel function}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Mean shift definition}{chapter.2}% 13
+\BOOKMARK [-1][-]{part.3}{III Vector Field Convolution}{}% 14
+\BOOKMARK [0][-]{chapter.3}{Vector field convolution}{part.3}% 15
+\BOOKMARK [-1][-]{part.4}{IV A parallel way of using VFC without using active contours}{}% 16
+\BOOKMARK [0][-]{chapter.4}{The implementation}{part.4}% 17
+\BOOKMARK [1][-]{section.4.1}{New kind approach to segment leukocytes}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{ALL-IDB blood cell dataset}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Mean shift application}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{The VFC result}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{External Energy}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.5.1}{Line functional}{section.4.5}% 23
+\BOOKMARK [2][-]{subsection.4.5.2}{Edge functional}{section.4.5}% 24
+\BOOKMARK [2][-]{subsection.4.5.3}{Termination functional}{section.4.5}% 25
+\BOOKMARK [2][-]{subsection.4.5.4}{External energy result}{section.4.5}% 26
+\BOOKMARK [1][-]{section.4.6}{Combination of two results: the division method}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.7}{Segmentation with the skeleton function}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.8}{Cells counting}{chapter.4}% 29
+\BOOKMARK [-1][-]{part.5}{V Results and conclusions}{}% 30
+\BOOKMARK [0][-]{chapter.5}{Experimental results and conclusions}{part.5}% 31
+\BOOKMARK [1][-]{section.5.1}{Results}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter*.21}{List of Figures}{part.5}% 33
+\BOOKMARK [0][-]{chapter*.22}{List of Tables}{part.5}% 34
+\BOOKMARK [0][-]{chapter*.23}{List of Listings}{part.5}% 35
+\BOOKMARK [0][-]{chapter*.24}{Bibliography}{part.5}% 36

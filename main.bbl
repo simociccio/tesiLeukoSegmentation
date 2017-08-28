@@ -120,6 +120,25 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
+\entry{website:IDB}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {unimi}{u.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{u1}
+  \strng{fullhash}{u1}
+  \field{sortinit}{U}
+  \field{title}{ALL-IDB Acute Lymphoblastic Leukemia Image Database for Image
+  Processing}
+  \verb{url}
+  \verb https://homes.di.unimi.it/scotti/all/
+  \endverb
+  \field{year}{2005}
+\endentry
+
 \lossort
 \endlossort
 
