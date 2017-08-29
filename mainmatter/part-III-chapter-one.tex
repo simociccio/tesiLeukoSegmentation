@@ -49,7 +49,7 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \begin{figure}
 \centering
 	\begin{center}
-		\includegraphics[width=\textwidth]{img/final/figure8.png}
+		\includegraphics[scale=0.5]{img/final/figure8.png}
 		\caption{skeleton segmentation}
 		\label{fig:fig8}
 	\end{center}
@@ -57,7 +57,7 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \begin{figure}
 \centering
 	\begin{center}
-		\includegraphics[width=\textwidth]{img/final/figure9.png}
+		\includegraphics[scale=0.5]{img/final/figure9.png}
 		\caption{Removing of little area to count the number of leukocytes}
 		\label{fig:fig9}
 	\end{center}
@@ -112,14 +112,16 @@ The algorithm obtains good results where we analyse images where is not present 
 
 The most important points that we focused in this thesis can be summarized in four sections:
 \begin{enumerate}
-\item preprocessing using the mean shift algorithm in order to delete all the differences of colour inside the cells
-\item extrapolation of the right and left component of the VFC force
-\item application of the skeleton in order to separate the overlapped cells
-\item recognize and count of the cells
+\item preprocessing using the mean shift algorithm in order to delete all the differences of colour inside the cells;
+\item extrapolation of the right and left component of the VFC force;
+\item application of the skeleton in order to separate the overlapped cells;
+\item recognize and count of the cells.
 \end{enumerate}
 
 \bigskip
 
-Our method demonstrate that at this moment is better than everyone algorithm existing in literature. The only problem is the less robustness causing by the low quality images and the over-segmentation caused by the granulocytes. But as the literature says, this is the complex field in image histologic segmentation.
+Our method demonstrates that at this moment is better than everyone algorithm existing in literature. The only problem is the less robustness causing by the low quality images and the over-segmentation caused by the granulocytes. But as the literature says, this is the complex field in histologic image segmentation.
 
-But is possible to resolve this robustness problem. As future works we want to implement a new kind of region linking in order to delete all the over-segmentation and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components.
+\bigskip
+
+But is possible to resolve this robustness problem. As future works we want to implement a new kind of region linking in order to delete all the over-segmentation and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components. Another feature to implement is the region merging for the small areas in granulocyte cells, to overcome the over-segmentation of these last. 

@@ -9,7 +9,7 @@ For the implementation we followed the approach shows in the figure \ref{fig:dia
 	\end{center}
 \end{figure}
 
-\section{New kind approach to segment leukocytes}
+\section{New kind of approach to segment leukocytes}
 As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
 \begin{figure}[htbp]
     \centering
@@ -79,12 +79,12 @@ Candidate Lymphoblasts & 510 & 130 \\
 \caption{Characteristics of the dataset. Images acquisition has been performed with a Canon PowerShot G5. Magnification of microscope goes from 300 to 500. The image format of the ALL- IDB1 folder images is JPG, ALL-IDB2 images have TIF format. The colour is 24 bit depth.}
 \label{tableidb}
 \end{table}
-The IDB1 set can be used both for testing segmentation capability of algorithms, as well as the classification systems and image preprocessing methods. This dataset is composed of 108 images collected during September, 2005. It contains about 39000 blood elements, where the lymphocytes has been labelled by expert oncologists.\cite{website:IDB}
+The IDB1 set can be used for testing segmentation capability of algorithms. This dataset is composed of 108 images collected during September, 2005. It contains about 39000 blood elements, where the lymphocytes has been labelled by expert oncologists.\cite{website:IDB}
 The IDB2 set has been designed for testing the performances of classification systems. The ALL-IDB2 version 1.0 is a collection of cropped area of interest of normal and blast cells that belongs to the ALL-IDB1 dataset. ALL-IDB2 images have similar gray level properties to the images of the ALL-IDB1, except the image dimensions.\cite{website:IDB}
-For our work we consider only normal leukocytes and we focused principally on the images where is present an overlap between the white blood cells.
+For our work we consider only normal type of leukocytes and we focused principally on the images where is present an overlap between the white blood cells.
 
 \section{Mean shift application}
-In order to resolve the illumination problems and to obtain a good visualization of the Wright-Giemsa stain cells we use the mean shift function. To obtain an acceptable result should be necessary, but using the bandwith parameters and the threshold parameter of the mean shift function we can obtain the same result. For our work we used $h_{s}$ (bandwith of the spatial kernel) = 4, $h_{r}$ (colour bandwith) = 4 and the threshold $th$ = 0.25. The result changing these parameters is not so significant in order to obtain a good final result, then is preferable use an image with a little bit definition but obtained in a very short time (2 seconds).
+In order to resolve the illumination problems and to obtain a good visualization of the Wright-Giemsa stain cells we use the mean shift function. To obtain an acceptable result should be necessary do an image preprocessing, but using the bandwith parameters and the threshold parameter of the mean shift function we can obtain the same result. For our work we used $h_{s}$ (bandwith of the spatial kernel) = 4, $h_{r}$ (colour bandwith) = 4 and the threshold $th$ = 0.25. The result changing these parameters is not so significant in order to obtain a good final result, then is preferable use an image with a little bit definition but obtained in a very short time (2 seconds for cropped images and 40 seconds for the entire images).
 
 \section{The VFC result}
 The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)$ to describe the field of the image and it's magnitude. Our purpose is find and image using these two components that describes all the leukocytes edges taking an accurate look on the edges in overlap. The first step then is extract the right component and the left component.
@@ -92,7 +92,7 @@ The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} 
 {u} _{vfc}=ExtF(x)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
 \end{equation}
 \begin{equation}
-{u} _{vfc}=ExtF(y)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
+{v} _{vfc}=ExtF(y)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
 \end{equation}
 where ExtF is the External force of the field. Now we have only an intensity image, but to understand how the field moves in the space we have to transform these two component $ u$ and $ v $ in grades. It a mandatory do this step because we want to understand the direction of every pixel in the figure. Is possible convert the two components in degrees using the $atan2d$ function \ref{fig:angle}.
 \begin{figure}
@@ -254,7 +254,7 @@ The result that we obtain from the skeleton application is a summary work, indee
 	\end{center}
 \end{figure}
 This over-segmentation isn't good for the correct visualization of leukocytes, but gives us a starting point to improve the solution and to obtain a better result.
-Then we try to combine the various result to obtain a segmentation that was similar to the original image. First of all we close all the holes that are inside the image, to obtain a sort of black and white mask. Another fundamental step is sum the skeleton image with the mask. Doing this step we can separate the foreground by the background. Now we can use for the last time the map of edges that we used to calculate the VFC field. We use it summarizing it with the image of leukocytes in foreground and passing this image sum as input to the function $bwareafilt$. We do this because this function extracts all connected components (objects)
+Then we try to combine the various result to obtain a segmentation that was similar to the original image. First of all we close all the holes that are inside the image, to obtain a sort of black and white mask. Another fundamental step is sum the skeleton image with the mask. Doing this step we can separate the foreground by the background. Now we can use for the last time the map of edges that we used to calculate the VFC field. We use it summing it up with the image of leukocytes in foreground and passing the result of this operation as input to the function $bwareafilt$. We do this because this function extracts all connected components (objects)
 from a binary image where the area is in range, producing the segmented image of the leukocytes \ref{fig:bwarea}.
 \begin{figure}
 	\begin{center}

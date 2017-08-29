@@ -16,7 +16,7 @@
 \BOOKMARK [0][-]{chapter.3}{Vector field convolution}{part.3}% 16
 \BOOKMARK [-1][-]{part.4}{IV A parallel way of using VFC without using active contours}{}% 17
 \BOOKMARK [0][-]{chapter.4}{The implementation}{part.4}% 18
-\BOOKMARK [1][-]{section.4.1}{New kind approach to segment leukocytes}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.1}{New kind of approach to segment leukocytes}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.2}{ALL-IDB blood cell dataset}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.3}{Mean shift application}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.4}{The VFC result}{chapter.4}% 22

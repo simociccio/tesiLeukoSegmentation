@@ -38,7 +38,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}The implementation}{23}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}New kind approach to segment leukocytes}{23}{section.4.1}
+\contentsline {section}{\numberline {4.1}New kind of approach to segment leukocytes}{23}{section.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}ALL-IDB blood cell dataset}{24}{section.4.2}
 \defcounter {refsection}{0}\relax 
