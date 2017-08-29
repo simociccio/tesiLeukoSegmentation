@@ -8,7 +8,7 @@ Given a kernel function $K(x_{i}-x)$, as the function that determines the weight
 \begin{equation}
 \phi ({x}) \leq 0
 \end{equation}
-The literature talk about some different kernel definitions, but typically to -mean shift use the Gaussian kernel or Epanechnikov kernel, respectively explained below:
+The literature talk about some different kernel definitions, but typically mean-shift uses the Gaussian kernel or Epanechnikov kernel, respectively explained below:
 \begin{equation}
 \phi({x}) = e^{-\frac{x^{2}}{2\sigma^{2}}}
 \end{equation}
@@ -18,7 +18,7 @@ K(x)={\begin{cases}\frac{3}{4}(1-x^{2})&{\text{if}}\ |x|\leq 1 \\0&{\text{else}}
 
 \bigskip
 
-Known as KDE, kernel density estimation, in statistics is consider a non-parametric way to estimate the probability density function of a random variable. KDE is a data smoothing problem where inferences about the population are made based on a finite data sample. when we work in the field of signal processing and econometrics it is termed the Parzen-Rosenblatt window method. 
+Known as KDE, kernel density estimation, in statistics is consider a non-parametric way to estimate the probability density function of a random variable. KDE is a data smoothing problem where inferences about the population are based on a finite data sample. When we work in the field of signal processing and econometrics it is termed the Parzen-Rosenblatt window method. 
 
 \bigskip
 
@@ -33,7 +33,7 @@ Define a d-variate kernel function $K(y)$ to be a search window; if it is symmet
 \begin{equation}
 K(y)= ck(\|y\|^{2})
 \end{equation}
-where $c$ is the normalization constant, $k(s)$ is a symmetric univariate kernel which that it is the profile of $K(y)$ if $s \geq 0$ and y is the center location of the search window. Calculating the ocation of the centroid of the search window we obtain a vector of the differences between the local mean and the centre of the window
+where $c$ is the normalization constant, $k(s)$ is a symmetric univariate kernel which that it is the profile of $K(y)$ if $s \geq 0$ and y is the center location of the search window. Calculating the location of the centroid of the search window we obtain a vector of the differences between the local mean and the centre of the window
 \begin{equation}
 m_{k}{(x)}= y_{centroid} - y
 \end{equation} 

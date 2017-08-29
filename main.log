@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.1)  28 AUG 2017 18:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.1)  29 AUG 2017 12:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1507,7 +1507,7 @@ Configuring pdfsync
 \openout2 = `frontmatter/frontespizio.aux'.
 
  (./frontmatter/frontespizio.tex
-<main-frn.pdf, id=152, 597.50829pt x 845.0471pt>
+<main-frn.pdf, id=156, 597.50829pt x 845.0471pt>
 File: main-frn.pdf Graphic file (type pdf)
  <use main-frn.pdf>
 Package pdftex.def Info: main-frn.pdf used on input line 2.
@@ -1563,7 +1563,7 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 ...5.2}Edge functional}{29}{subsection.4.5.2}
+l.51 ...5.1}Line functional}{29}{subsection.4.5.1}
                                                    [1
 
 
@@ -1580,7 +1580,7 @@ l.36 \mainmatter
 \openout2 = `mainmatter/intro.aux'.
 
  (./mainmatter/intro.tex
-<img/leuko.png, id=253, 552.0625pt x 471.7625pt>
+<img/leuko.png, id=258, 552.0625pt x 471.7625pt>
 File: img/leuko.png Graphic file (type png)
  <use img/leuko.png>
 Package pdftex.def Info: img/leuko.png used on input line 14.
@@ -1598,13 +1598,13 @@ Package pdftex.def Info: img/leuko.png used on input line 14.
 
  (./mainmatter/part-I-chapter-one.tex
 Chapter 1.
-<img/fieldex.png, id=286, 460.72125pt x 348.30125pt>
+<img/fieldex.png, id=291, 460.72125pt x 348.30125pt>
 File: img/fieldex.png Graphic file (type png)
  <use img/fieldex.png>
 Package pdftex.def Info: img/fieldex.png used on input line 8.
 (pdftex.def)             Requested size: 184.94292pt x 139.81229pt.
 
-<img/dipole.png, id=287, 173.64874pt x 169.63374pt>
+<img/dipole.png, id=292, 173.64874pt x 169.63374pt>
 File: img/dipole.png Graphic file (type png)
  <use img/dipole.png>
 Package pdftex.def Info: img/dipole.png used on input line 13.
@@ -1620,6 +1620,11 @@ FIELDS AND SEGMENTATION TECHNIQUES
  []
 
 [8 <./img/fieldex.png> <./img/dipole.png>] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 44--53
+
+ []
+
+
 Overfull \hbox (108.23209pt too wide) has occurred while \output is active
 [][]\OT1/cmr/m/n/10.95 10 \OT1/cmr/m/sl/10.95 CHAPTER 1.  OVERVIEW ABOUT VECTOR
  FIELDS AND SEGMENTATION TECHNIQUES
@@ -1655,40 +1660,40 @@ Chapter 3.
 
  (./mainmatter/part-II-chapter-one.tex
 Chapter 4.
-<img/diag.png, id=398, 604.2575pt x 511.9125pt>
+<img/diag.png, id=403, 604.2575pt x 511.9125pt>
 File: img/diag.png Graphic file (type png)
  <use img/diag.png>
 Package pdftex.def Info: img/diag.png used on input line 6.
 (pdftex.def)             Requested size: 302.128pt x 255.95563pt.
 
-<img/circlesEx.png, id=402, 427.5975pt x 318.43968pt>
+<img/circlesEx.png, id=407, 427.5975pt x 318.43968pt>
 File: img/circlesEx.png Graphic file (type png)
  <use img/circlesEx.png>
 Package pdftex.def Info: img/circlesEx.png used on input line 17.
 (pdftex.def)             Requested size: 184.94292pt x 137.72812pt.
 
-<img/distancerTransform.png, id=403, 427.5975pt x 318.43968pt>
+<img/distancerTransform.png, id=408, 427.5975pt x 318.43968pt>
 File: img/distancerTransform.png Graphic file (type png)
 
 <use img/distancerTransform.png>
 Package pdftex.def Info: img/distancerTransform.png used on input line 24.
 (pdftex.def)             Requested size: 184.94292pt x 137.72812pt.
 
-<img/watershedEx.png, id=404, 427.5975pt x 318.43968pt>
+<img/watershedEx.png, id=409, 427.5975pt x 318.43968pt>
 File: img/watershedEx.png Graphic file (type png)
 
 <use img/watershedEx.png>
 Package pdftex.def Info: img/watershedEx.png used on input line 30.
 (pdftex.def)             Requested size: 184.94292pt x 137.72812pt.
 
-<img/Im007_1_crop.png, id=407, 790.955pt x 323.2075pt>
+<img/Im007_1_crop.png, id=412, 790.955pt x 323.2075pt>
 File: img/Im007_1_crop.png Graphic file (type png)
 
 <use img/Im007_1_crop.png>
 Package pdftex.def Info: img/Im007_1_crop.png used on input line 40.
 (pdftex.def)             Requested size: 184.94292pt x 75.57402pt.
 
-<img/waterTrRes.png, id=408, 733.23938pt x 310.91156pt>
+<img/waterTrRes.png, id=413, 733.23938pt x 310.91156pt>
 File: img/waterTrRes.png Graphic file (type png)
 
 <use img/waterTrRes.png>
@@ -1704,19 +1709,19 @@ Underfull \vbox (badness 3861) has occurred while \output is active []
 [24 <./img/diag.png>] [25 <./img/circlesEx.png (PNG copy)> <./img/distancerTran
 sform.png (PNG copy)> <./img/watershedEx.png (PNG copy)>] [26 <./img/Im007_1_cr
 op.png> <./img/waterTrRes.png (PNG copy)>]
-<img/angle.png, id=437, 733.23938pt x 310.91156pt>
+<img/angle.png, id=442, 733.23938pt x 310.91156pt>
 File: img/angle.png Graphic file (type png)
  <use img/angle.png>
 Package pdftex.def Info: img/angle.png used on input line 101.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
-<img/PmedAngle.png, id=439, 733.23938pt x 310.91156pt>
+<img/PmedAngle.png, id=444, 733.23938pt x 310.91156pt>
 File: img/PmedAngle.png Graphic file (type png)
  <use img/PmedAngle.png>
 Package pdftex.def Info: img/PmedAngle.png used on input line 110.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
-<img/bwdistAngle.png, id=442, 733.23938pt x 310.91156pt>
+<img/bwdistAngle.png, id=447, 733.23938pt x 310.91156pt>
 File: img/bwdistAngle.png Graphic file (type png)
 
 <use img/bwdistAngle.png>
@@ -1729,20 +1734,20 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 168.
 
-[29] <img/Eext.png, id=472, 739.26187pt x 313.17pt>
+[29] <img/Eext.png, id=477, 739.26187pt x 313.17pt>
 File: img/Eext.png Graphic file (type png)
  <use img/Eext.png>
 Package pdftex.def Info: img/Eext.png used on input line 177.
 (pdftex.def)             Requested size: 369.63002pt x 156.58461pt.
 
-<img/onlyleuco.png, id=473, 733.23938pt x 310.91156pt>
+<img/onlyleuco.png, id=478, 733.23938pt x 310.91156pt>
 File: img/onlyleuco.png Graphic file (type png)
  <use img/onlyleuco.png>
 Package pdftex.def Info: img/onlyleuco.png used on input line 186.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
 [30 <./img/Eext.png (PNG copy)> <./img/onlyleuco.png (PNG copy)>]
-<img/Pmedonlyleuko.png, id=482, 733.23938pt x 310.91156pt>
+<img/Pmedonlyleuko.png, id=487, 733.23938pt x 310.91156pt>
 File: img/Pmedonlyleuko.png Graphic file (type png)
 
 <use img/Pmedonlyleuko.png>
@@ -1754,20 +1759,20 @@ Overfull \hbox (2.75034pt too wide) in paragraph at lines 201--201
 od[][]| 
  []
 
-<img/overlay.png, id=486, 733.23938pt x 310.91156pt>
+<img/overlay.png, id=491, 733.23938pt x 310.91156pt>
 File: img/overlay.png Graphic file (type png)
  <use img/overlay.png>
 Package pdftex.def Info: img/overlay.png used on input line 206.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
-<img/overLeuko.png, id=492, 733.23938pt x 310.91156pt>
+<img/overLeuko.png, id=497, 733.23938pt x 310.91156pt>
 File: img/overLeuko.png Graphic file (type png)
  <use img/overLeuko.png>
 Package pdftex.def Info: img/overLeuko.png used on input line 215.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
 [31 <./img/Pmedonlyleuko.png (PNG copy)> <./img/overlay.png (PNG copy)>]
-<img/skel.png, id=501, 733.23938pt x 310.91156pt>
+<img/skel.png, id=506, 733.23938pt x 310.91156pt>
 File: img/skel.png Graphic file (type png)
  <use img/skel.png>
 Package pdftex.def Info: img/skel.png used on input line 226.
@@ -1781,13 +1786,13 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 241.
 
-<img/skelfin.png, id=503, 733.23938pt x 310.91156pt>
+<img/skelfin.png, id=508, 733.23938pt x 310.91156pt>
 File: img/skelfin.png Graphic file (type png)
  <use img/skelfin.png>
 Package pdftex.def Info: img/skelfin.png used on input line 251.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
-<img/segmentation.png, id=505, 937.25156pt x 232.61906pt>
+<img/segmentation.png, id=510, 937.25156pt x 232.61906pt>
 File: img/segmentation.png Graphic file (type png)
 
 <use img/segmentation.png>
@@ -1804,14 +1809,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 276.
 
-<img/celluleConCito.png, id=529, 733.23938pt x 310.91156pt>
+<img/celluleConCito.png, id=534, 733.23938pt x 310.91156pt>
 File: img/celluleConCito.png Graphic file (type png)
 
 <use img/celluleConCito.png>
 Package pdftex.def Info: img/celluleConCito.png used on input line 288.
 (pdftex.def)             Requested size: 221.93375pt x 94.1044pt.
 
-<img/conteggioNuclei(noWatersheed).png, id=530, 733.23938pt x 310.91156pt>
+<img/conteggioNuclei(noWatersheed).png, id=535, 733.23938pt x 310.91156pt>
 File: img/conteggioNuclei(noWatersheed).png Graphic file (type png)
 
 <use img/conteggioNuclei(noWatersheed).png>
@@ -1827,63 +1832,63 @@ opy)> <./img/conteggioNuclei(noWatersheed).png (PNG copy)>] [36
 
  (./mainmatter/part-III-chapter-one.tex
 Chapter 5.
-<img/final/figure1.png, id=568, 575.90157pt x 414.04688pt>
+<img/final/figure1.png, id=573, 575.90157pt x 414.04688pt>
 File: img/final/figure1.png Graphic file (type png)
 
 <use img/final/figure1.png>
 Package pdftex.def Info: img/final/figure1.png used on input line 7.
 (pdftex.def)             Requested size: 147.95207pt x 106.36711pt.
 
-<img/final/figure2.png, id=569, 569.87906pt x 411.78844pt>
+<img/final/figure2.png, id=574, 569.87906pt x 411.78844pt>
 File: img/final/figure2.png Graphic file (type png)
 
 <use img/final/figure2.png>
 Package pdftex.def Info: img/final/figure2.png used on input line 13.
 (pdftex.def)             Requested size: 147.95207pt x 106.90538pt.
 
-<img/final/figure3.png, id=570, 575.90157pt x 414.04688pt>
+<img/final/figure3.png, id=575, 575.90157pt x 414.04688pt>
 File: img/final/figure3.png Graphic file (type png)
 
 <use img/final/figure3.png>
 Package pdftex.def Info: img/final/figure3.png used on input line 18.
 (pdftex.def)             Requested size: 147.95207pt x 106.36711pt.
 
-<img/final/figure4.png, id=571, 569.87906pt x 411.78844pt>
+<img/final/figure4.png, id=576, 569.87906pt x 411.78844pt>
 File: img/final/figure4.png Graphic file (type png)
 
 <use img/final/figure4.png>
 Package pdftex.def Info: img/final/figure4.png used on input line 23.
 (pdftex.def)             Requested size: 147.95207pt x 106.90538pt.
 
-<img/final/figure5.png, id=572, 575.90157pt x 414.04688pt>
+<img/final/figure5.png, id=577, 575.90157pt x 414.04688pt>
 File: img/final/figure5.png Graphic file (type png)
 
 <use img/final/figure5.png>
 Package pdftex.def Info: img/final/figure5.png used on input line 28.
 (pdftex.def)             Requested size: 147.95207pt x 106.36711pt.
 
-<img/final/figure6.png, id=573, 569.87906pt x 411.78844pt>
+<img/final/figure6.png, id=578, 569.87906pt x 411.78844pt>
 File: img/final/figure6.png Graphic file (type png)
 
 <use img/final/figure6.png>
 Package pdftex.def Info: img/final/figure6.png used on input line 33.
 (pdftex.def)             Requested size: 147.95207pt x 106.90538pt.
 
-<img/final/figure7.png, id=574, 569.87906pt x 411.78844pt>
+<img/final/figure7.png, id=579, 569.87906pt x 411.78844pt>
 File: img/final/figure7.png Graphic file (type png)
 
 <use img/final/figure7.png>
 Package pdftex.def Info: img/final/figure7.png used on input line 38.
 (pdftex.def)             Requested size: 147.95207pt x 106.90538pt.
 
-<img/final/figure8.png, id=577, 1445.4pt x 488.57532pt>
+<img/final/figure8.png, id=582, 1445.4pt x 488.57532pt>
 File: img/final/figure8.png Graphic file (type png)
 
 <use img/final/figure8.png>
 Package pdftex.def Info: img/final/figure8.png used on input line 52.
 (pdftex.def)             Requested size: 369.88583pt x 125.02863pt.
 
-<img/final/figure9.png, id=578, 1445.4pt x 488.57532pt>
+<img/final/figure9.png, id=583, 1445.4pt x 488.57532pt>
 File: img/final/figure9.png Graphic file (type png)
 
 <use img/final/figure9.png>
@@ -1902,14 +1907,14 @@ Overfull \hbox (40.65071pt too wide) in paragraph at lines 71--88
 mg/final/figure5.png (PNG copy)> <./img/final/figure6.png (PNG copy)> <./img/fi
 nal/figure7.png (PNG copy)>] [41 <./img/final/figure8.png (PNG copy)> <./img/fi
 nal/figure9.png (PNG copy)>]
-<img/final/meangran.png, id=599, 458.46281pt x 376.40625pt>
+<img/final/meangran.png, id=604, 458.46281pt x 376.40625pt>
 File: img/final/meangran.png Graphic file (type png)
 
 <use img/final/meangran.png>
 Package pdftex.def Info: img/final/meangran.png used on input line 100.
 (pdftex.def)             Requested size: 229.23083pt x 188.20265pt.
 
-<img/final/fingran.png, id=600, 458.46281pt x 376.40625pt>
+<img/final/fingran.png, id=605, 458.46281pt x 376.40625pt>
 File: img/final/fingran.png Graphic file (type png)
 
 <use img/final/fingran.png>
@@ -1958,16 +1963,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D40398F1DB9C8FF6F2CD30E02AEEBD0F;2552.
+(rerunfilecheck)             Checksum: 4A2971744F3883C6D7EB6B1B135D4B03;2629.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27817 strings out of 493304
- 466581 string characters out of 6139872
- 714606 words of memory out of 5000000
- 30501 multiletter control sequences out of 15000+600000
+ 27814 strings out of 493304
+ 466517 string characters out of 6139872
+ 714607 words of memory out of 5000000
+ 30497 multiletter control sequences out of 15000+600000
  15432 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,33n,51p,10457b,2171s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1988,10 +1993,10 @@ cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (59 pages, 2244265 bytes).
+Output written on main.pdf (59 pages, 2244615 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 666 compressed objects within 7 object streams
- 187 named destinations out of 1000 (max. 500000)
- 467 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 800 PDF objects out of 1000 (max. 8388607)
+ 671 compressed objects within 7 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 475 words of extra memory for PDF output out of 10000 (max. 10000000)
 
