@@ -46,9 +46,9 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Mean shift result in gray scale,(b) VFC u and v components,(c) Distance transform on grades image, (d) External force image, (e) overlay of two results, (f) Opening of initial edge image, (g) Leukocytes mask\relax }}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Mean shift result in gray scale,(b) VFC u and v components,(c) Distance transform on grades image,(d) External force image,(e) Overlay of two results,(f) Opening of initial edge image,(g) Leukocytes mask\relax }}{40}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces skeleton segmentation\relax }}{41}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Skeleton segmentation\relax }}{41}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Removing of little area to count the number of leukocytes\relax }}{42}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
