@@ -52,7 +52,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.2}Edge functional}{29}{subsection.4.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.3}Termination functional}{29}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}Termination functional}{30}{subsection.4.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.4}External energy result}{30}{subsection.4.5.4}
 \defcounter {refsection}{0}\relax 

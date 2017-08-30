@@ -10,7 +10,7 @@ For the implementation we followed the approach shows in the figure \ref{fig:dia
 \end{figure}
 
 \section{New kind of approach to segment leukocytes}
-As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW\ref{fig:overlaptransf}.Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations.\ref{fig:overlapwater}
+As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. Here\ref{fig:overlap} there is an example of the watershed transform. Takes in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW\ref{fig:overlaptransf}. Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations \ref{fig:overlapwater}.
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
@@ -33,7 +33,7 @@ As we can see in literature, the main approach used to resolve the overlap probl
     \end{subfigure}
     \caption{(a) Example of two circle in overlap, (b) Distance transform, (c) Watershed result}\label{fig:stepswater}
 \end{figure}
-This is an ideal case to analyse. But when we work with the overlapping between cells the result of the division by Watershed transform is not optimal like the example \ref{fig:stepswater}. Probably the cause derived from the low definition of the figures and especially the shape of the cells. Here there is an example of what happened when we try to divide 3 cells in overlap\ref{fig:exOnImage7}.
+This is an ideal case to analyse. But when we work with the overlapping between cells the result of the division by watershed transform is not optimal like the example \ref{fig:stepswater}. Probably the cause derived from the low definition of the figures and especially the shape of the cells. Here there is an example of what happened when we try to divide 3 cells in overlap \ref{fig:exOnImage7}.
 \begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -84,7 +84,7 @@ The IDB2 set has been designed for testing the performances of classification sy
 For our work we consider only normal type of leukocytes and we focused principally on the images where is present an overlap between the white blood cells.
 
 \section{Mean shift application}
-In order to resolve the illumination problems and to obtain a good visualization of the Wright-Giemsa stain cells we use the mean shift function. To obtain an acceptable result should be necessary do an image preprocessing, but using the bandwith parameters and the threshold parameter of the mean shift function we can obtain the same result. For our work we used $h_{s}$ (bandwith of the spatial kernel) = 4, $h_{r}$ (colour bandwith) = 4 and the threshold $th$ = 0.25. The result changing these parameters is not so significant in order to obtain a good final result, then is preferable use an image with a little bit definition but obtained in a very short time (2 seconds for cropped images and 40 seconds for the entire images).
+In order to resolve the illumination problems and to obtain a good visualization of the Wright-Giemsa stain cells we use the mean shift function. To obtain an acceptable result should be necessary do an image preprocessing, but using the bandwith parameters and the threshold parameter of the mean shift function we can obtain the same result. For our work we used $h_{s}$ (bandwith of the spatial kernel) = 4, $h_{r}$ (colour bandwith) = 4 and the threshold $th$ = 0.25. The result changing these parameters is not so significant in order to obtain a good final result, then is preferable use an image with a little bit definition but obtained in a very short time (2 seconds for cropped images and 40 seconds for the entire images). What that we have obtained very helpful to calculate the edge map that will give like attribute to the VFC function.
 
 \section{The VFC result}
 The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)$ to describe the field of the image and it's magnitude. Our purpose is find and image using these two components that describes all the leukocytes edges taking an accurate look on the edges in overlap. The first step then is extract the right component and the left component.
@@ -94,7 +94,7 @@ The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} 
 \begin{equation}
 {v} _{vfc}=ExtF(y)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
 \end{equation}
-where ExtF is the External force of the field. Now we have only an intensity image, but to understand how the field moves in the space we have to transform these two component $ u$ and $ v $ in grades. It a mandatory do this step because we want to understand the direction of every pixel in the figure. Is possible convert the two components in degrees using the $atan2d$ function \ref{fig:angle}.
+where ExtF is the External force of the field. Now we have only an intensity image, but to understand how the field moves in the space we have to transform these two component $ u$ and $ v $ in grades. Do this step a mandatory because we want to understand the direction of every pixel in the figure especially the pixels that describe edges of cells. Is possible convert the two components in degrees using the $atan2d$ function \ref{fig:angle}.
 \begin{figure}
 	\begin{center}
 		\centering
@@ -266,21 +266,24 @@ from a binary image where the area is in range, producing the segmented image of
 \end{figure}
 \section{Cells counting}
 To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but it's easy to overtake this problem without consider the little regions that are inside the image. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
-\begin{scriptsize}
-	\begin{lstlisting} [frame=single]
+\bigskip
+\begin{minipage}{\linewidth}
+\begin{lstlisting} [frame=single]
 CC = bwconncomp(BW2,8);
 numPixels = cellfun(@numel,CC.PixelIdxList);
 [~,idx] = min(numPixels);
 
-while min(numPixels) < cellsize
+while min(numPixels) < cellsize/2
     BW2(CC.PixelIdxList{idx}) = 0;
     CC = bwconncomp(BW2,8);
     numPixels = cellfun(@numel,CC.PixelIdxList);
     [~,idx] = min(numPixels);
 end
 [labeledImage, numberOfObject] = bwlabel(BW2);
-	\end{lstlisting}
-\end{scriptsize}
+\end{lstlisting}
+\end{minipage}
+\bigskip
+
 The resulting image of this consider only the the regions that are the same size of the nucleus or bigger.
 \begin{figure}
 	\centering
