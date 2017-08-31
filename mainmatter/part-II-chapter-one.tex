@@ -99,7 +99,7 @@ where ExtF is the External force of the field. Now we have only an intensity ima
 	\begin{center}
 		\centering
 		\includegraphics[scale=0.5]{img/angle.png}
-		\caption{degrees image}
+		\caption{Degrees image}
 		\label{fig:angle}
 	\end{center}
 \end{figure}
@@ -220,6 +220,10 @@ We choose to use the red color, because if we isolating only the red component o
 
 \section{Segmentation with the skeleton function}
 Starting from the image \ref{fig:leukoover} we have to connect every single white point to the nearest. To do this task we use the function $imdilate$ to dilate all the white dots with a diamond structural element with the size of 6 pixels. after this step we apply the closing of the opening with two disk respectively of the size 3 and 4 pixels. Now we can apply the skeleton function or the thinning of the edges. To do this passage we use the Matlab function $bwmorph$ that it's not the best function to do this but is the faster one. We try another skeleton external function written by N. Howe that is very interesting because has a precision to compute the skeleton of the image that is very impressive, but because the Pc latency we can't use the last one function. After the skeleton application we obtain an image that contains some spurious branches \ref{fig:skel}. 
+
+\bigskip
+
+To solve this problem is possible to use the Matlab function $bwmorph$ to prune the spurious branches, but in this case the function doesn’t work very well. For this reason we implement a code to resolve the problem. Our code is like a parser that for each point it's see if it is a part of a close circle or not. If it's not a part of a loop the code deletes this point. In a nutshell we save only the point that stay in a 'road' with the starting point and the end point coincident. Below you can read a snippet of pruning code.
 \begin{figure}
 	\begin{center}
 		\centering
@@ -228,7 +232,8 @@ Starting from the image \ref{fig:leukoover} we have to connect every single whit
 		\label{fig:skel}
 	\end{center}
 \end{figure}
-To solve this problem is possible to use the Matlab function $bwmorph$ to prune the spurious branches, but in this case the function doesn’t work very well. For this reason we implement a code to resolve the problem. Our code is like a parser that for each point it's see if it is a part of a close circle or not. If it's not a part of a loop the code deletes this point. In a nutshell we save only the point that stay in a 'road' with the starting point and the end point coincident. Below you can read a snippet of pruning code.
+
+\begin{minipage}{\linewidth}
 \begin{scriptsize}
 	\begin{lstlisting} [frame=single]
 B = branchpoints;
@@ -243,7 +248,7 @@ Dmask = false(size(skel));
 skelD = skel - Dmask;
 	\end{lstlisting}
 \end{scriptsize}
-
+\end{minipage}
 The result that we obtain from the skeleton application is a summary work, indeed we obtain an over-segmentation as is viewable from the image \ref{fig:skelfin}.
 \begin{figure}
 	\begin{center}

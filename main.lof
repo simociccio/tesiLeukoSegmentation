@@ -20,7 +20,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces (a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap\relax }}{26}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces degrees image\relax }}{28}{figure.caption.10}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Degrees image\relax }}{28}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Median filter on degrees image\relax }}{28}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
@@ -52,6 +52,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Removing of little area to count the number of leukocytes\relax }}{42}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Granulocite after Mean shift application\relax }}{43}{figure.caption.26}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Granulocite after Mean shift application\relax }}{42}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Over-segmentation caused by the granulocyte\relax }}{44}{figure.caption.27}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Granulocite after Mean shift application\relax }}{43}{figure.caption.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Granulocite after Mean shift application\relax }}{44}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Over-segmentation caused by the granulocyte\relax }}{44}{figure.caption.29}

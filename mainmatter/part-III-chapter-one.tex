@@ -63,6 +63,20 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 	\end{center}
 \end{figure}
 \bigskip
+\begin{figure}
+\begin{center}
+		\includegraphics[scale=0.5]{img/final/nooverlap.png}
+		\caption{Granulocite after Mean shift application}
+		\label{fig:noover}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+		\includegraphics[scale=0.5]{img/final/nooverlapseg.png}
+		\caption{Granulocite after Mean shift application}
+		\label{fig:nooverseg}
+\end{center}
+\end{figure}
 
 As it possible to see, between the two images there are some differences. the first one is, removing the small areas by the image we are going to lose the element on the right of the image. This is happened because it was artefact caused by the Giemsa stain method, then is obvious that it's not well segmented because under the stain is not present  leukocyte. The result of the counting in this case is 29. The algorithm fails the result because two leukocytes have a visualization problem and inside the nuclei have a line that divide in tow sides the cells.
 Working with cropped images we obtain a better result because we have to analyse less cells and as a consequence we have an increase of the speed as is explained in the table \ref{statistics}.
@@ -88,6 +102,7 @@ image 18 & yes & 1.717642 & 3/3 \\
 \caption{Statistics result}
 \label{statistics}
 \end{table}
+The table shows only the images where is present the worst case of overlap. The images where is not present any kind of contact between the cells are well segmented with no problem of over-segmentation. In the images  \ref{fig:noover}, \ref{fig:nooverseg} there is an example of segmentation of six cells without any kind of over-segmentation or division. This is only an example but our implementation works very well with all the images with no overlapped cells. In this case is not useful the mean shift application because the cells are well distant from their selves. this means that the computational cost is very less then the version with the mean shift application (total time $<$ 1 second).
 
 \section{Conclusions and future works}
 The dissertation proposed an innovative white blood cell recognition and segmentation. It was implemented using some notions already known in literature but never applied in this field. Combining them we obtain a new innovative method in which the major innovation is the use of the Vector field convolution in union to the mean shift and the skeleton function to obtain a result better of the watershed.

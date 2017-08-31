@@ -68,10 +68,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Results}{39}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Conclusions and future works}{39}{section.5.2}
+\contentsline {section}{\numberline {5.2}Conclusions and future works}{43}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{45}{chapter*.28}
+\contentsline {chapter}{List of Figures}{47}{chapter*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{47}{chapter*.29}
+\contentsline {chapter}{List of Tables}{49}{chapter*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{49}{chapter*.30}
+\contentsline {chapter}{Bibliography}{51}{chapter*.32}

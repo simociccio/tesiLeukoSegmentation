@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.1)  30 AUG 2017 16:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.1)  31 AUG 2017 11:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1772,53 +1772,58 @@ Package pdftex.def Info: img/overLeuko.png used on input line 215.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
 [31 <./img/onlyleuco.png (PNG copy)> <./img/Pmedonlyleuko.png (PNG copy)>]
-<img/skel.png, id=501, 733.23938pt x 310.91156pt>
+[32 <./img/overlay.png (PNG copy)> <./img/overLeuko.png (PNG copy)>]
+<img/skel.png, id=506, 733.23938pt x 310.91156pt>
 File: img/skel.png Graphic file (type png)
  <use img/skel.png>
-Package pdftex.def Info: img/skel.png used on input line 226.
+Package pdftex.def Info: img/skel.png used on input line 230.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
- [32 <./img/overlay.png (PNG copy)> <./img/overLeuko.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 241.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 246.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 241.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 246.
 
 <img/skelfin.png, id=508, 733.23938pt x 310.91156pt>
 File: img/skelfin.png Graphic file (type png)
  <use img/skelfin.png>
-Package pdftex.def Info: img/skelfin.png used on input line 251.
+Package pdftex.def Info: img/skelfin.png used on input line 256.
 (pdftex.def)             Requested size: 366.61879pt x 155.45538pt.
 
 <img/segmentation.png, id=510, 937.25156pt x 232.61906pt>
 File: img/segmentation.png Graphic file (type png)
 
 <use img/segmentation.png>
-Package pdftex.def Info: img/segmentation.png used on input line 262.
+Package pdftex.def Info: img/segmentation.png used on input line 267.
 (pdftex.def)             Requested size: 281.17763pt x 69.78625pt.
- [33 <./img/skel.png (PNG copy)>]
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 236--272
+[][][]$[][][]$
+ []
+
+[33 <./img/skel.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 276.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 277.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 281.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 282.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 277.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 282.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5446) has occurred while \output is active []
 
  [34 <./img/skelfin.png (PNG copy)> <./img/segmentation.png (PNG copy)>]
 <img/celluleConCito.png, id=534, 733.23938pt x 310.91156pt>
 File: img/celluleConCito.png Graphic file (type png)
 
 <use img/celluleConCito.png>
-Package pdftex.def Info: img/celluleConCito.png used on input line 291.
+Package pdftex.def Info: img/celluleConCito.png used on input line 296.
 (pdftex.def)             Requested size: 221.93375pt x 94.1044pt.
 
 <img/conteggioNuclei(noWatersheed).png, id=535, 733.23938pt x 310.91156pt>
@@ -1826,7 +1831,7 @@ File: img/conteggioNuclei(noWatersheed).png Graphic file (type png)
 
 <use img/conteggioNuclei(noWatersheed).png>
 Package pdftex.def Info: img/conteggioNuclei(noWatersheed).png used on input li
-ne 296.
+ne 301.
 (pdftex.def)             Requested size: 221.93375pt x 94.1044pt.
 ) [35 <./img/celluleConCito.png (PNG copy)> <./img/conteggioNuclei(noWatersheed
 ).png (PNG copy)>] [36
@@ -1904,7 +1909,30 @@ File: img/final/figure9.png Graphic file (type png)
 Package pdftex.def Info: img/final/figure9.png used on input line 60.
 (pdftex.def)             Requested size: 338.76479pt x 325.71606pt.
 
-Overfull \hbox (40.65071pt too wide) in paragraph at lines 71--88
+<img/final/nooverlap.png, id=579, 959.08313pt x 290.58563pt>
+File: img/final/nooverlap.png Graphic file (type png)
+
+<use img/final/nooverlap.png>
+Package pdftex.def Info: img/final/nooverlap.png used on input line 68.
+(pdftex.def)             Requested size: 479.54039pt x 145.29245pt.
+
+Overfull \hbox (109.65456pt too wide) in paragraph at lines 68--69
+ [] 
+ []
+
+<img/final/nooverlapseg.png, id=580, 959.08313pt x 290.58563pt>
+File: img/final/nooverlapseg.png Graphic file (type png)
+
+<use img/final/nooverlapseg.png>
+Package pdftex.def Info: img/final/nooverlapseg.png used on input line 75.
+(pdftex.def)             Requested size: 479.54039pt x 145.29245pt.
+
+Overfull \hbox (109.65456pt too wide) in paragraph at lines 75--76
+ [] 
+ []
+
+
+Overfull \hbox (40.65071pt too wide) in paragraph at lines 85--102
  [][][][] 
  []
 
@@ -1915,36 +1943,38 @@ Overfull \hbox (40.65071pt too wide) in paragraph at lines 71--88
  <./img/final/figure3.png (PNG copy)> <./img/final/figure4.png (PNG copy)> <./i
 mg/final/figure5.png (PNG copy)> <./img/final/figure6.png (PNG copy)> <./img/fi
 nal/figure7.png (PNG copy)>] [41 <./img/final/figure8.png>] [42 <./img/final/fi
-gure9.png>] <img/final/meangran.png, id=605, 458.46281pt x 376.40625pt>
+gure9.png> <./img/final/nooverlap.png (PNG copy)>]
+<img/final/meangran.png, id=611, 458.46281pt x 376.40625pt>
 File: img/final/meangran.png Graphic file (type png)
 
 <use img/final/meangran.png>
-Package pdftex.def Info: img/final/meangran.png used on input line 100.
+Package pdftex.def Info: img/final/meangran.png used on input line 115.
 (pdftex.def)             Requested size: 229.23083pt x 188.20265pt.
 
-<img/final/fingran.png, id=606, 458.46281pt x 376.40625pt>
+<img/final/fingran.png, id=612, 458.46281pt x 376.40625pt>
 File: img/final/fingran.png Graphic file (type png)
 
 <use img/final/fingran.png>
-Package pdftex.def Info: img/final/fingran.png used on input line 107.
+Package pdftex.def Info: img/final/fingran.png used on input line 122.
 (pdftex.def)             Requested size: 229.23083pt x 188.20265pt.
-) [43 <./img/final/meangran.png (PNG copy)>]
-[44 <./img/final/fingran.png (PNG copy)>] (./main.lof)
+ [43 <./img/final/nooverlapseg.png (PNG copy)>]
+[44 <./img/final/meangran.png (PNG copy)> <./img/final/fingran.png (PNG copy)>]
+) [45] [46
+
+
+] (./main.lof)
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
- [45
+ [47
 
-
-
-] [46
+] [48
 
 ] (./main.lot)
 \tf@lot=\write11
 \openout11 = `main.lot'.
 
-
-[47] [48
+ [49] [50
 
 ]
 
@@ -1954,7 +1984,7 @@ Package movie15 Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 (movie15)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
-[49]
+[51]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
  (./main.aux (./frontmatter/frontespizio.aux) (./frontmatter/dedica.aux)
 (./frontmatter/abstract.aux) (./mainmatter/intro.aux)
@@ -1964,16 +1994,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5A8C29A9F64353669FA58637AA1C4312;2572.
+(rerunfilecheck)             Checksum: 30C3EBC53C645E86D94440E31B572594;2572.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27806 strings out of 493304
- 466463 string characters out of 6139872
- 712603 words of memory out of 5000000
- 30495 multiletter control sequences out of 15000+600000
+ 27824 strings out of 493304
+ 466838 string characters out of 6139872
+ 712803 words of memory out of 5000000
+ 30507 multiletter control sequences out of 15000+600000
  15432 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,33n,51p,10457b,2171s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1994,10 +2024,10 @@ cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (57 pages, 2229559 bytes).
+Output written on main.pdf (59 pages, 2489089 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 659 compressed objects within 7 object streams
- 185 named destinations out of 1000 (max. 500000)
- 467 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 805 PDF objects out of 1000 (max. 8388607)
+ 672 compressed objects within 7 object streams
+ 189 named destinations out of 1000 (max. 500000)
+ 477 words of extra memory for PDF output out of 10000 (max. 10000000)
 
