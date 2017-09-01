@@ -44,18 +44,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.15}{\ignorespaces (a) All the regions, (b) Only big regions\relax }}{35}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Union of two different areas\relax }}{36}{figure.caption.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Merge of two areas\relax }}{36}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Union of initial image and new area\relax }}{37}{figure.caption.24}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Mean shift result in gray scale,(b) VFC u and v components,(c) Distance transform on grades image,(d) External force image,(e) Overlay of two results,(f) Opening of initial edge image,(g) Leukocytes mask\relax }}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces (a) Mean shift result in gray scale,(b) VFC u and v components,(c) Distance transform on grades image,(d) External force image,(e) Overlay of two results,(f) Opening of initial edge image,(g) Leukocytes mask\relax }}{42}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Skeleton segmentation\relax }}{41}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Skeleton segmentation\relax }}{43}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Removing of little area to count the number of leukocytes\relax }}{42}{figure.caption.24}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Merging of little area to count the number of leukocytes\relax }}{43}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Granulocite after Mean shift application\relax }}{42}{figure.caption.25}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Granulocite after Mean shift application\relax }}{44}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Granulocite after Mean shift application\relax }}{43}{figure.caption.26}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Granulocite after Mean shift application\relax }}{44}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Granulocite after Mean shift application\relax }}{44}{figure.caption.28}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Granulocite after Mean shift application\relax }}{45}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Over-segmentation caused by the granulocyte\relax }}{44}{figure.caption.29}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Over-segmentation caused by the granulocyte\relax }}{46}{figure.caption.32}

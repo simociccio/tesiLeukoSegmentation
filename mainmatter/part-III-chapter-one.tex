@@ -1,6 +1,6 @@
 \chapter{Experimental results and conclusions}
 \section{Results}
-Our propose in a nutshell is a new substitutive method of Watershed transform. The following results are obtained using an Acer Aspire E1 laptop with 8 gb of RAM. TThe figure \ref{fig:alltheprocess} shows all the process starting from the gray scale image to the mask used to find only the leukocytes.
+Our propose in a nutshell is a new substitutive method of Watershed transform. The following results are obtained using an Acer Aspire E1 laptop with 8 gb of RAM. The figure \ref{fig:alltheprocess} shows all the process starting from the gray scale image to the mask used to find only the leukocytes.
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
@@ -57,8 +57,8 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \begin{figure}
 \centering
 	\begin{center}
-		\includegraphics[scale=0.5]{img/final/figure9.png}
-		\caption{Removing of little area to count the number of leukocytes}
+		\includegraphics[scale=0.5]{img/final/untitled.png}
+		\caption{Merging of little area to count the number of leukocytes}
 		\label{fig:fig9}
 	\end{center}
 \end{figure}
@@ -78,7 +78,7 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \end{center}
 \end{figure}
 
-As it possible to see, between the two images there are some differences. the first one is, removing the small areas by the image we are going to lose the element on the right of the image. This is happened because it was artefact caused by the Giemsa stain method, then is obvious that it's not well segmented because under the stain is not present  leukocyte. The result of the counting in this case is 29. The algorithm fails the result because two leukocytes have a visualization problem and inside the nuclei have a line that divide in tow sides the cells.
+As it possible to see, between the two images \ref{fig:fig8} and \ref{fig:fig9} there are some differences. The more visible difference is the bigger presence of agglomerate of small areas that create a kind of cell in the first segmentation. This is happened because it was artefact caused by the Giemsa stain method, but in our approach we can discriminate all this little areas going to remove them because the over-segmentation of this kind (where there are only little areas) means that isn't a leukocyte but only a stain of colour. The result of the counting in this case is 29. 
 Working with cropped images we obtain a better result because we have to analyse less cells and as a consequence we have an increase of the speed as is explained in the table \ref{statistics}.
 \begin{table}
 \centering
@@ -86,7 +86,7 @@ Working with cropped images we obtain a better result because we have to analyse
 \hline 
 name & cropped & time & Number of recognized cells / number of real cells\\ 
 \hline 
-image 5 & no & 45.050214 & 29/27\\ 
+image 5 & no & 45.050214 & 29/29\\ 
 \hline 
 image 5 & yes & 2.214306 & 7/7\\ 
 \hline 
@@ -102,7 +102,7 @@ image 18 & yes & 1.717642 & 3/3 \\
 \caption{Statistics result}
 \label{statistics}
 \end{table}
-The table shows only the images where is present the worst case of overlap. The images where is not present any kind of contact between the cells are well segmented with no problem of over-segmentation. In the images  \ref{fig:noover}, \ref{fig:nooverseg} there is an example of segmentation of six cells without any kind of over-segmentation or division. This is only an example but our implementation works very well with all the images with no overlapped cells. In this case is not useful the mean shift application because the cells are well distant from their selves. this means that the computational cost is very less then the version with the mean shift application (total time $<$ 1 second).
+The table shows only the images where is present the worst case of overlap and clump between the cells. The images where is not present any kind of contact between the cells are well segmented with no problem of over-segmentation. In the images  \ref{fig:noover}, \ref{fig:nooverseg} there is an example of segmentation of six cells without any kind of over-segmentation or division. This is only an example but our implementation works very well with all the images with no overlapped cells. In this case is not useful the mean shift application because the cells are well distant from their selves. This means that the computational cost is very less then the version with the mean shift application (total time $<$ 1 second).
 
 \section{Conclusions and future works}
 The dissertation proposed an innovative white blood cell recognition and segmentation. It was implemented using some notions already known in literature but never applied in this field. Combining them we obtain a new innovative method in which the major innovation is the use of the Vector field convolution in union to the mean shift and the skeleton function to obtain a result better of the watershed.
@@ -139,4 +139,4 @@ Our method demonstrates that at this moment is better than everyone algorithm ex
 
 \bigskip
 
-But is possible to resolve this robustness problem. As future works we want to implement a new kind of region linking in order to delete all the over-segmentation and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components. Another feature to implement is the region merging for the small areas in granulocyte cells, to overcome the over-segmentation of these last. 
+But is possible to resolve this robustness problem. As future works we want to implement a new kind of region merging in order to delete all the over-segmentation caused by the granulocyte and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components. 

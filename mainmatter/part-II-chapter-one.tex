@@ -270,7 +270,8 @@ from a binary image where the area is in range, producing the segmented image of
 	\end{center}
 \end{figure}
 \section{Cells counting}
-To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but it's easy to overtake this problem without consider the little regions that are inside the image. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
+\subsection{detection and deletion of small over-segmentation areas}
+To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but it's easy to overtake this problem without consider the little regions that are inside the image. This was our first approach in order to obtain a good counting. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
 \bigskip
 \begin{minipage}{\linewidth}
 \begin{lstlisting} [frame=single]
@@ -304,4 +305,34 @@ The resulting image of this consider only the the regions that are the same size
 	\end{subfigure}
 	\caption{(a) All the regions, (b) Only big regions}
 	\label{fig:counting}
+\end{figure}
+
+\bigskip
+
+This result is not really good in order to have a good segmentation. But it gives us the idea to implement a region-merging function. 
+\subsection{Region-Merging}
+In order to obtain a merge of the areas we have followed this approach. As first step we separate in two different images the small areas and the big areas, because we want to know about every small area to which of the big areas it belongs. The threshold used to create these tow different images is the medium of the biggest region that there is in the image. To know it we use the minimum distance between the centroids of one small area and all centroids of  the big areas. Then as soon as we labelled every area and we calculated all the centroids we can know what are the areas with minimum distance using the Euclidean distance formula. Now is possible to isolate the two areas \ref{fig:areas}. To merge them we use the function $imclose$ with a disk element with 5 of radius \ref{fig:mergeareas}. Now we can join this result with the image with over-segmentations using the mathematics union operator \ref{fig:unionimage}.
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/final/unionareas.png}
+		\caption{Union of two different areas}
+		\label{fig:areas}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/final/areamerging.png}
+		\caption{Merge of two areas}
+		\label{fig:mergeareas}
+	\end{center}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\centering
+		\includegraphics[scale=0.5]{img/final/finalresult.png}
+		\caption{Union of initial image and new area}
+		\label{fig:unionimage}
+	\end{center}
 \end{figure}

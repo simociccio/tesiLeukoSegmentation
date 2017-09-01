@@ -62,16 +62,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.8}Cells counting}{34}{section.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{V\hspace {1em}Results and conclusions}{37}{part.5}
+\contentsline {subsection}{\numberline {4.8.1}detection and deletion of small over-segmentation areas}{34}{subsection.4.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Experimental results and conclusions}{39}{chapter.5}
+\contentsline {subsection}{\numberline {4.8.2}Region-Merging}{35}{subsection.4.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Results}{39}{section.5.1}
+\contentsline {part}{V\hspace {1em}Results and conclusions}{39}{part.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Conclusions and future works}{43}{section.5.2}
+\contentsline {chapter}{\numberline {5}Experimental results and conclusions}{41}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{47}{chapter*.30}
+\contentsline {section}{\numberline {5.1}Results}{41}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{49}{chapter*.31}
+\contentsline {section}{\numberline {5.2}Conclusions and future works}{45}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{51}{chapter*.32}
+\contentsline {chapter}{List of Figures}{47}{chapter*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{49}{chapter*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{51}{chapter*.35}
