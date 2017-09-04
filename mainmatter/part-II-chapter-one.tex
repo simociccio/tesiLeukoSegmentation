@@ -49,7 +49,7 @@ This is an ideal case to analyse. But when we work with the overlapping between 
 	\caption{(a) Original leukocytes image, (b) Watershed transform applied to three cells in overlap}
 	\label{fig:exOnImage7}
 \end{figure}
-As is possible to see, this method produce a no-realistic separation of the cells. For this reason we study a different method that in automatic way produce a realistic division of the cells. Starting from the resulting image after the application of the mean shift algorithm, we based our implementation using principally the output of the VFC field, the image relative to the External energy of the image to describe the edges, the median filter and the skeleton method.
+As is possible to see, this method produce a no-realistic separation of the cells. For this reason we study a different method that in automatic way produce a realistic division of the cells. Starting from the resulting image after the application of the mean shift algorithm, we based our implementation using principally the output of the VFC field, the image relative to the External energy of the image to describe the edges, the median filter, the skeleton method and the region-merging function.
 \section{ALL-IDB blood cell dataset}
 The images of the dataset have been captured with an optical laboratory microscope coupled with
 a Canon PowerShot G5 camera. All images are in JPG format with 24-bit colour depth. The first 33
@@ -87,14 +87,14 @@ For our work we consider only normal type of leukocytes and we focused principal
 In order to resolve the illumination problems and to obtain a good visualization of the Wright-Giemsa stain cells we use the mean shift function. To obtain an acceptable result should be necessary do an image preprocessing, but using the bandwith parameters and the threshold parameter of the mean shift function we can obtain the same result. For our work we used $h_{s}$ (bandwith of the spatial kernel) = 4, $h_{r}$ (colour bandwith) = 4 and the threshold $th$ = 0.25. The result changing these parameters is not so significant in order to obtain a good final result, then is preferable use an image with a little bit definition but obtained in a very short time (2 seconds for cropped images and 40 seconds for the entire images). What that we have obtained very helpful to calculate the edge map that will give like attribute to the VFC function.
 
 \section{The VFC result}
-The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)$ to describe the field of the image and it's magnitude. Our purpose is find and image using these two components that describes all the leukocytes edges taking an accurate look on the edges in overlap. The first step then is extract the right component and the left component.
+The VFC uses the two components of the external force ${u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)$ to describe the field of the image and it's magnitude. Our purpose is find an image using these two components that describes all the leukocytes edges taking an accurate look on the edges in overlap and in clump. The first step then is extract the right component and the left component by the VFC field.
 \begin{equation}
 {u} _{vfc}=ExtF(x)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
 \end{equation}
 \begin{equation}
 {v} _{vfc}=ExtF(y)/\sqrt{ExtF(x)^{2} + ExtF(y)^{2}}
 \end{equation}
-where ExtF is the External force of the field. Now we have only an intensity image, but to understand how the field moves in the space we have to transform these two component $ u$ and $ v $ in grades. Do this step a mandatory because we want to understand the direction of every pixel in the figure especially the pixels that describe edges of cells. Is possible convert the two components in degrees using the $atan2d$ function \ref{fig:angle}.
+ExtF is the External force of the field. Now we have only an intensity image, but to understand how the field moves in the space we have to transform these two component $ u$ and $ v $ in grades. Do this step is a mandatory because we want to understand the direction of every pixel in the figure especially the pixels that describe edges of cells. Is possible convert the two components in degrees using the $atan2d$ function \ref{fig:angle}.
 \begin{figure}
 	\begin{center}
 		\centering
@@ -122,14 +122,14 @@ As is possible to see in the result \ref{fig:angle}, there are a lot of points t
 		\label{fig:bwdistangle}
 	\end{center}
 \end{figure}
-But we have ever the same problem. in the image there are trace of the red blood cells, then we had to find a method to isolate only the leukocytes. We started using the external energy of the image. For an image $I(x,y)$ all the lines, edges and terminal points the general formulation of the Energy of the image is
+But we have ever the same problem. In the image there are trace of the red blood cells, then we had to find a method to isolate only the leukocytes. We started using the external energy of the image. For an image $I(x,y)$ all the lines, edges and terminal points the general formulation of the Energy of the image is
 \begin{equation}
  E_{image}=w_{line}E_{line} + w_{edge}E_{edge} + w_{term}E_{term}
 \end{equation}
 where $w_{line}, w_{edge}, w_{term}$ are weights of the features.
 
 \subsection{Line functional}
-The line functional or in other terms the intensity of the image is in a nutshell the attracted value of the dark lines to the light line. It's possible choose this attraction putting a positive or negative sign before the force that this attraction has to be.
+The line functional or in other terms the intensity of the image is in a nutshell the attracted value of the dark lines to the light line. Is possible choose this attraction putting a positive or negative sign before the force that this attraction has to be.
 \begin{equation}
 	E_{{line}}=filter(I(x,y))
 \end{equation}
@@ -139,11 +139,10 @@ The edge functional bases it's work on the image gradient.
 \begin{equation}
 E_{{edge}}=-\left|\nabla I(x,y)\right\vert ^{2}
 \end{equation}
-It's very useful because when we try to analyse the feature of the image, we work with maxims and minims. with this formula we can avoid the local minima that are not object of interest. The energy functional using scale space continuation is
+It's very useful because when we try to analyse the feature of the image, we work with maxims and minims. With this formula we can avoid the local minima that are not object of interest. The energy functional using scale space continuation is
 \begin{equation}
 E_{edge}=-\left|G_{\sigma }*\nabla ^{2}I\right\vert ^{2}
 \end{equation}
-
 where $ G_{\sigma } $ is a Gaussian with standard deviation $ \sigma $.
 
 \subsection{Termination functional}
@@ -170,7 +169,8 @@ E_{{term}}={\partial \theta  \over \partial n_{{\perp }}}={\partial ^{2}C/\parti
 
 \subsection{External energy result}
 Now we have only to specify the value of each parameter explained above.
-To obtain the desired outcome we did some empirical experiments, obtaining the best result with $ Wedge=8, Wline=-8 $ and $ Wterm=0$. this result \ref{fig:Eextforce} permit us to extract only the leukocytes part of the image using some analysis image exploit \ref{fig:onlyleu}.
+To obtain the desired outcome we did some empirical experiments, obtaining the best result with $ Wedge=8, Wline=-8 $ and $ Wterm=0$. This result \ref{fig:Eextforce} permit us to extract only the leukocytes part of the image using some analysis image exploit \ref{fig:onlyleu}.
+
 \begin{figure}
 	\begin{center}
 		\centering
@@ -179,7 +179,6 @@ To obtain the desired outcome we did some empirical experiments, obtaining the b
 		\label{fig:Eextforce}
 	\end{center}
 \end{figure}
-
 \begin{figure}
 	\begin{center}
 		\centering
@@ -188,6 +187,8 @@ To obtain the desired outcome we did some empirical experiments, obtaining the b
 		\label{fig:onlyleu}
 	\end{center}
 \end{figure}
+\bigskip
+
 In order to delete all the uniform part of the figure and put in exalt the edges we use a mediand filter using the function $ordfilt2$ searching the 18th element of the $5 * 5$ mask \ref{fig:Pmedonlyleu}.
 
 \begin{figure}
@@ -219,11 +220,11 @@ We choose to use the red color, because if we isolating only the red component o
 \end{figure}
 
 \section{Segmentation with the skeleton function}
-Starting from the image \ref{fig:leukoover} we have to connect every single white point to the nearest. To do this task we use the function $imdilate$ to dilate all the white dots with a diamond structural element with the size of 6 pixels. after this step we apply the closing of the opening with two disk respectively of the size 3 and 4 pixels. Now we can apply the skeleton function or the thinning of the edges. To do this passage we use the Matlab function $bwmorph$ that it's not the best function to do this but is the faster one. We try another skeleton external function written by N. Howe that is very interesting because has a precision to compute the skeleton of the image that is very impressive, but because the Pc latency we can't use the last one function. After the skeleton application we obtain an image that contains some spurious branches \ref{fig:skel}. 
+Starting from the image \ref{fig:leukoover} we have to connect every single white point to the nearest. To do this task we use the function $imdilate$ to dilate all the white dots with a diamond structural element with the size of 6 pixels. After this step we apply the closing of the opening with two disk respectively of the size 3 and 4 pixels. Now we can apply the skeleton function or the thinning of the edges. To do this passage we use the Matlab function $bwmorph$ that it's not the best function to do this but is the faster one. We try another skeleton external function written by N. Howe that is very interesting because has a precision to compute the skeleton of the image that is very impressive, but because the Pc latency we can't use the last one function. After the skeleton application we obtain an image that contains some spurious branches \ref{fig:skel}. 
 
 \bigskip
 
-To solve this problem is possible to use the Matlab function $bwmorph$ to prune the spurious branches, but in this case the function doesn’t work very well. For this reason we implement a code to resolve the problem. Our code is like a parser that for each point it's see if it is a part of a close circle or not. If it's not a part of a loop the code deletes this point. In a nutshell we save only the point that stay in a 'road' with the starting point and the end point coincident. Below you can read a snippet of pruning code.
+To solve this problem is possible to use the Matlab function $bwmorph$ to prune the spurious branches, but in this case the function doesn’t work very well. For this reason we implement a code to resolve the problem. Our code is like a parser that for each point sees if it is a part of a close circle or not. If it's not a part of a loop the code deletes this point. In a nutshell we save only the point that stay in a 'road' with the starting point and the end point coincident. Below you can read a snippet of pruning code.
 \begin{figure}
 	\begin{center}
 		\centering
@@ -270,7 +271,7 @@ from a binary image where the area is in range, producing the segmented image of
 	\end{center}
 \end{figure}
 \section{Cells counting}
-\subsection{detection and deletion of small over-segmentation areas}
+\subsection{Detection and deletion of small over-segmentation areas}
 To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but it's easy to overtake this problem without consider the little regions that are inside the image. This was our first approach in order to obtain a good counting. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
 \bigskip
 \begin{minipage}{\linewidth}

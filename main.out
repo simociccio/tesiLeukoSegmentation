@@ -28,7 +28,7 @@
 \BOOKMARK [1][-]{section.4.6}{Combination of two results: the division method}{chapter.4}% 28
 \BOOKMARK [1][-]{section.4.7}{Segmentation with the skeleton function}{chapter.4}% 29
 \BOOKMARK [1][-]{section.4.8}{Cells counting}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.8.1}{detection and deletion of small over-segmentation areas}{section.4.8}% 31
+\BOOKMARK [2][-]{subsection.4.8.1}{Detection and deletion of small over-segmentation areas}{section.4.8}% 31
 \BOOKMARK [2][-]{subsection.4.8.2}{Region-Merging}{section.4.8}% 32
 \BOOKMARK [-1][-]{part.5}{V Results and conclusions}{}% 33
 \BOOKMARK [0][-]{chapter.5}{Experimental results and conclusions}{part.5}% 34

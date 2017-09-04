@@ -78,7 +78,7 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \end{center}
 \end{figure}
 
-As it possible to see, between the two images \ref{fig:fig8} and \ref{fig:fig9} there are some differences. The more visible difference is the bigger presence of agglomerate of small areas that create a kind of cell in the first segmentation. This is happened because it was artefact caused by the Giemsa stain method, but in our approach we can discriminate all this little areas going to remove them because the over-segmentation of this kind (where there are only little areas) means that isn't a leukocyte but only a stain of colour. The result of the counting in this case is 29. 
+As it possible to see, between the two images \ref{fig:fig8} and \ref{fig:fig9} there are some differences. The more visible difference is the bigger presence of agglomerate of small areas that create a kind of cell in the first segmentation. This is happened because it was an artefact caused by the Giemsa stain method, but in our approach we can discriminate all this little areas going to remove them because the over-segmentation of this kind (where there are only little areas) means that isn't a leukocyte but only a stain of colour. The result of the counting in this case is 29. 
 Working with cropped images we obtain a better result because we have to analyse less cells and as a consequence we have an increase of the speed as is explained in the table \ref{statistics}.
 \begin{table}
 \centering
@@ -125,13 +125,17 @@ The algorithm obtains good results where we analyse images where is not present 
 \end{center}
 \end{figure}
 
-The most important points that we focused in this thesis can be summarized in four sections:
+The most important points that we focused in this thesis can be listed in four sections:
+\bigskip
+
+\begin{minipage}{\linewidth}
 \begin{enumerate}
 \item preprocessing using the mean shift algorithm in order to delete all the differences of colour inside the cells;
 \item extrapolation of the right and left component of the VFC force;
 \item application of the skeleton in order to separate the overlapped cells;
 \item recognize and count of the cells.
 \end{enumerate}
+\end{minipage}
 
 \bigskip
 
@@ -139,4 +143,4 @@ Our method demonstrates that at this moment is better than everyone algorithm ex
 
 \bigskip
 
-But is possible to resolve this robustness problem. As future works we want to implement a new kind of region merging in order to delete all the over-segmentation caused by the granulocyte and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components. 
+Is possible to resolve this robustness problem. As future works we want to implement a new kind of region merging in order to delete all the over-segmentation caused by the granulocyte and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components. 
