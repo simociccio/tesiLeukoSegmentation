@@ -12,7 +12,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}An overview about Image Segmentation methods}{9}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}threshold-based techniques}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.1}Threshold-based techniques}{9}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Histogram-based techniques}{10}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.5}Watershed technique}{11}{subsection.1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}Mean Shift}{13}{part.2}
+\contentsline {part}{II\hspace {1em}About Mean Shift}{13}{part.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Mean shift}{15}{chapter.2}
 \defcounter {refsection}{0}\relax 
@@ -30,41 +30,39 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Mean shift definition}{16}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{III\hspace {1em}Vector Field Convolution}{17}{part.3}
+\contentsline {part}{III\hspace {1em}About Vector Field Convolution}{17}{part.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Vector field convolution}{19}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{IV\hspace {1em}A parallel way of using VFC without using active contours}{21}{part.4}
+\contentsline {part}{IV\hspace {1em}A parallel way of using VFC without active contours}{21}{part.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}The implementation}{23}{chapter.4}
+\contentsline {chapter}{\numberline {4}The proposed approach}{23}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}New kind of approach to segment leukocytes}{23}{section.4.1}
+\contentsline {section}{\numberline {4.1}ALL-IDB blood cell dataset}{24}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}ALL-IDB blood cell dataset}{24}{section.4.2}
+\contentsline {section}{\numberline {4.2}Mean shift application}{27}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Mean shift application}{27}{section.4.3}
+\contentsline {section}{\numberline {4.3}The VFC result}{27}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}The VFC result}{27}{section.4.4}
+\contentsline {section}{\numberline {4.4}External Energy}{30}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}External Energy}{27}{section.4.5}
+\contentsline {subsection}{\numberline {4.4.1}Line functional}{30}{subsection.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Line functional}{29}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.4.2}Edge functional}{30}{subsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}Edge functional}{29}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.4.3}Termination functional}{31}{subsection.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.3}Termination functional}{30}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.4.4}External energy result}{31}{subsection.4.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.4}External energy result}{30}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.5}Combination of two results: the division method}{33}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Combination of two results: the division method}{31}{section.4.6}
+\contentsline {section}{\numberline {4.6}Segmentation with the skeleton function}{34}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Segmentation with the skeleton function}{32}{section.4.7}
+\contentsline {section}{\numberline {4.7}Cells counting}{36}{section.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Cells counting}{34}{section.4.8}
+\contentsline {subsection}{\numberline {4.7.1}Detection and deletion of small over-segmentation areas}{36}{subsection.4.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.8.1}Detection and deletion of small over-segmentation areas}{34}{subsection.4.8.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.8.2}Region-Merging}{35}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.7.2}Region-Merging}{36}{subsection.4.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{V\hspace {1em}Results and conclusions}{39}{part.5}
 \defcounter {refsection}{0}\relax 
@@ -74,8 +72,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Conclusions and future works}{45}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{47}{chapter*.33}
+\contentsline {chapter}{List of Figures}{47}{chapter*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{49}{chapter*.34}
+\contentsline {chapter}{List of Tables}{49}{chapter*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{51}{chapter*.35}
+\contentsline {chapter}{Bibliography}{51}{chapter*.36}

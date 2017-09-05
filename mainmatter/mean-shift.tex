@@ -1,5 +1,5 @@
 \chapter{Mean shift}
-The mean shift procedure was originally presented in 1975 by Fukunaga and Hostetler. It is a no-parametric method for locating the modes of a density function in  discrete data sampled. It is an iterative method that start with an initial estimate $x$.
+The mean shift procedure was originally presented in 1975 by Fukunaga and Hostetler. It is a no-parametric method for locating the modes of a density function in  discrete data sampled. It is an iterative method that starts with an initial estimate $x$.
 \section{Mean shift kernel function}
 Given a kernel function $K(x_{i}-x)$, as the function that determines the weight nearby points to re-estimate the mean. The kernel function has to respect the following constraints:
 \begin{equation}
@@ -8,7 +8,7 @@ Given a kernel function $K(x_{i}-x)$, as the function that determines the weight
 \begin{equation}
 \phi ({x}) \leq 0
 \end{equation}
-The literature talk about some different kernel definitions, but typically mean-shift uses the Gaussian kernel or Epanechnikov kernel, respectively explained below:
+The literature talks about some different kernel definitions, but typically mean-shift uses the Gaussian kernel or Epanechnikov kernel, respectively explained below:
 \begin{equation}
 \phi({x}) = e^{-\frac{x^{2}}{2\sigma^{2}}}
 \end{equation}
@@ -18,11 +18,11 @@ K(x)={\begin{cases}\frac{3}{4}(1-x^{2})&{\text{if}}\ |x|\leq 1 \\0&{\text{else}}
 
 \bigskip
 
-Known as KDE, kernel density estimation, in statistics is consider a non-parametric way to estimate the probability density function of a random variable. KDE is a data smoothing problem where inferences about the population are based on a finite data sample. When we work in the field of signal processing and econometrics it is termed the Parzen-Rosenblatt window method. 
+Known as KDE, Kernel Density Estimation, in statistics is considered a non-parametric way to estimate the probability density function of a random variable. KDE is a data smoothing problem where inferences about the population are based on a finite data sample. When we work in the field of signal processing and econometrics it is termed the Parzen-Rosenblatt window method. 
 
 \bigskip
 
-Given an unknown density $f$ a distribution $X$, we want to estimate the shape of this function $f$. Its kernel density estimator is 
+Given an unknown density $f$ of a distribution $X$, we want to estimate the shape of this function $f$. Its kernel density estimator is 
 \begin{equation}
 {{\hat {f}}_{h}(x)={\frac {1}{n}}\sum _{i=1}^{n}K_{h}(x-x_{i})={\frac {1}{nh}}\sum _{i=1}^{n}K{\Big (}{\frac {x-x_{i}}{h}}{\Big )}}
 \end{equation} 
@@ -35,12 +35,16 @@ K(y)= ck(\|y\|^{2})
 \end{equation}
 where $c$ is the normalization constant, $k(s)$ is a symmetric univariate kernel which that it is the profile of $K(y)$ if $s \geq 0$ and y is the center location of the search window. Calculating the location of the centroid of the search window we obtain a vector of the differences between the local mean and the centre of the window
 \begin{equation}
-m_{k}{(x)}= y_{centroid} - y
+m_{k}{(x)}= y_{centroid} - y 
 \end{equation} 
 Defined $\xi$ as an arbitrary small value, indicating a threshold, if
 \begin{equation}
 \|m_{k}(y)\|^2 \geq \xi     
 \end{equation}
+the search window can be moved iteratively, because it means that it has not yet reached the convergence, that is the value in which we can stop computing the Mean Shift value.
+
+\bigskip
+
 As we said previously this is an iterative algorithm, then the search window can be moved iteratively, because it means that it has not find the convergence. The convergence is simply the value in which we can stop computing the mean shift value. Now is possible to define the other centre of the search window and start again the process.
 
 \bigskip
@@ -54,3 +58,5 @@ actual pixel value and the pixel taken for the computation. If the difference is
 
 \item $th$. Threshold value. It represents the parameter $\xi$. When this value is reached, the algorithm terminates.
 \end{enumerate}
+
+

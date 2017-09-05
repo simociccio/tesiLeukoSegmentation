@@ -1,10 +1,10 @@
 \chapter{Vector field convolution}
-The Vector field convolution is a snake external force created by Bing Li and S.T. Acton.
+The vector field convolution is a snake external force created by Bing Li and S.T. Acton.
 
 \bigskip
 
-Convolving a vector field with the edge of the map derived from the image you get an external force, the VFC. Active contours using the VFC external force are called VFC snakes. Like the GVF snakes instead of being Formulated using the standard energy minimization framework, VFC snakes are constructed from a state of equilibrium between the forces. The VFC snakes besides having a wide capture range and the ability to capture the concavities, are better resistant to noise image, have the ability to adapt the force field and reduce drastically the computational cost.
-Before to explain the VFC is right explain the vector field kernel
+Convolving a vector field with the edge of the map derived from the image you get an external force, the VFC. Active contours using the VFC external force are called VFC snakes. Like the GVF snakes instead of being formulated using the standard energy minimization framework, VFC snakes are constructed from a state of equilibrium between the forces. The VFC snakes besides having a wide capture range and the ability to capture the concavities, are better resistant to noise image, have the ability to adapt the force field and reduce drastically the computational cost.
+Before to explain the VFC it is right to explain the vector field kernel
 \begin{equation}
  k ( x,y ) =m(x,y)n(x,y)
 \end{equation}
@@ -12,11 +12,11 @@ where n is the unit vector that points to the origin of the kernel
 \begin{equation}
 n ( x,y ) = [\frac{-x}{r} , \frac{-y}{r} ]
 \end{equation}
-and m is the magnitude of the vector . The authors of the VFC implemented two kind of magnitude. If we consider the origin as the point of interest, this vector field kernel has the desirable property that a free particle placed in the field is able to move to the point of interest. The external force that work in the VFC is defined in this way:
+and m is the magnitude of the vector . The authors of the VFC implemented two kinds of magnitude. If we consider the origin as the point of interest, this vector field kernel has the desirable property that a free particle placed in the field is able to move to the point of interest. The external force that works in the VFC is defined in this way:
 \begin{equation}
 {f} _{vfc} ( x,y ) = {u} _{vfc} ( x,y ) , {v} _{vfc} (x,y)
 \end{equation}
-Since the map of the edge is non-negative and is wider near the edges of the image, the edges act to a greater extent on the VFC than homogeneous regions. Therefore, the free particles of homogeneous regions will be attracted to the edges. If we present the vector field kernel using a complex-valued range, the VFC is just the filtering result of the edge map, which does not depend on the origin of the kernel. The VFC field highly depends on the magnitude of the vector field kernel . Field VFC has the magnitude directly proportional to the vector field kernel (x, y). Knowing that the figure of interest has less influence on the particles away from it, the magnitude must be expressed as a positive function decreasing with respect to the distance of the origin. Below are propose two types of magnitude functions, given as
+Since the map of the edge is non-negative and is wider near the edges of the image, the edges act to a greater extent on the VFC than homogeneous regions. Therefore, the free particles of homogeneous regions will be attracted to the edges. If we present the vector field kernel using a complex-valued range, the VFC is just the filtering result of the edge map, which does not depend on the origin of the kernel. The VFC field highly depends on the magnitude of the vector field kernel . The field VFC has the magnitude directly proportional to the vector field kernel (x, y). Knowing that the figure of interest has less influence on the particles away from it, the magnitude must be expressed as a positive function decreasing with respect to the distance of the origin. Below we propose two types of magnitude functions, given as
 \begin{equation}
 {m} _{1} ( x,y ) =(r+\epsilon) ^{-\gamma}
 \end{equation}
