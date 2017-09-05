@@ -15,7 +15,7 @@ In the first phase we acquire the image containing the cells. In the second step
 
 \bigskip
 
-As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform. In figure (\ref{fig:overlap}) there is an example of the watershed transform. Taken in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW (\ref{fig:overlaptransf}). Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations (\ref{fig:overlapwater}).
+As we can see in literature, the main approach used to resolve the overlap problem is using the watershed transform \cite{water}. In figure (\ref{fig:overlap}) there is an example of the watershed transform. Taken in input the image of the two overlapped circles, we calculate the distance transform, or in other words we calculate the Euclidean distance transform of the binary image BW. For each pixel in BW, the distance transform assigns a number that is the distance between that pixel and the nearest non-zero pixel of BW (\ref{fig:overlaptransf}). Giving the distance transform result to the watershed algorithm we obtain a division between circles because the watershed transform finds "catchment basins" or "watershed ridge lines" in an image by treating it as a surface where light pixels represent high elevations and dark pixels represent low elevations (\ref{fig:overlapwater}).
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
@@ -57,7 +57,7 @@ This is an ideal case to analyse. But when we work with the overlapping between 
 As it is possible to see, this method produces a no-realistic separation of the cells. For this reason we study a different method that in automatic way produces a realistic division of the cells. Starting from the resulting image after the application of the mean shift algorithm, we based our implementation using principally the output of the VFC field, the image relative to the External energy of the image to describe the edges, the median filter, the skeleton method and the region-merging function.
 
 \bigskip
-The proposed system has been tested on images belonging to a public dataset, the ALL-IDB blood cell dataset.
+The proposed system has been tested on images belonging to a public dataset, the ALL-IDB blood cell dataset \cite{idbpaper}.
 
 \section{ALL-IDB blood cell dataset}
 The images of the dataset have been captured with an optical laboratory microscope coupled with
@@ -301,7 +301,7 @@ Then we try to combine the various result to obtain a segmentation that was simi
 
 \section{Cells counting}
 \subsection{Detection and deletion of small over-segmentation areas}
-To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but it's easy to overtake this problem without consider the little regions that are inside the image. This was our first approach in order to obtain a good counting. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
+To understand if all that we did had a sense, we have to do a counting of the cells. Because the images have a low definition we can found an over segmentation inside the cells, but is easy to overcome this problem if we do not consider the little regions that are inside the image. This was our first approach in order to obtain a good counting. Then if we delete all the regions that are less than an upperbound we can have the exact number of leukocytes inside the image. We do this using the following snippet code
 \bigskip
 \begin{minipage}{\linewidth}
 \begin{lstlisting} [frame=single]

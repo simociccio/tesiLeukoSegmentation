@@ -104,12 +104,15 @@ image 18 & yes & 1.717642 & 3/3 \\
 \end{table}
 The table shows only the images where is present the worst case of overlap and clump between the cells. The images where is not present any kind of contact between the cells are well segmented with no problem of over-segmentation. In the images  \ref{fig:noover}, \ref{fig:nooverseg} there is an example of segmentation of six cells without any kind of over-segmentation or division. This is only an example but our implementation works very well with all the images with no overlapped cells. In this case is not useful the mean shift application because the cells are well distant from their selves. This means that the computational cost is very less then the version with the mean shift application (total time $<$ 1 second).
 
+\section{Related works}
+Comparing our work with another that obtain the best result using our same dataset \cite{otherwork}, is evident confronting the results where is present a clump or an overlap between the cells that our results are better. In this work the WBC counting is done by counting a number of connected components but is not present a method to divide the clumped cells. We obtain another similar result when we confront our work with a previous work doing in the Cagliari University \cite{dirub}. Also in this work the clumped and the overlapped cells are not well segmented.
+
 \section{Conclusions and future works}
 The dissertation proposed an innovative white blood cell recognition and segmentation. It was implemented using some notions already known in literature but never applied in this field. Combining them we obtain a new innovative method in which the major innovation is the use of the Vector field convolution in union to the mean shift and the skeleton function to obtain a result better of the watershed.
 
 \bigskip
 
-The algorithm obtains good results where we analyse images where is not present the granulocyte, because the shape of it's nucleus produce a lot of over-segmentation.\ref{fig:grangray}\ref{fig:gran}
+The algorithm obtains good results where we analyse images where is not present the granulocyte, because the shape of its nucleus produce a lot of over-segmentation.\ref{fig:grangray}\ref{fig:gran}
 \begin{figure}
 \begin{center}
 		\includegraphics[scale=0.5]{img/final/meangran.png}
