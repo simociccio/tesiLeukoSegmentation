@@ -63,7 +63,8 @@
   \field{sortinit}{C}
   \field{title}{”A Multiple Classifier Learning by Sampling System for White
   Blood Cells Segmentation”}
-  \field{year}{2015.}
+  \field{journaltitle}{CAIP}
+  \field{year}{2015}
 \endentry
 
 \entry{cheng}{article}{}
@@ -78,7 +79,9 @@
   \strng{fullhash}{C1}
   \field{sortinit}{C}
   \field{title}{”Mean shift, mode seeking, and clustering”}
-  \field{year}{1995.}
+  \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+  \field{year}{1995}
 \endentry
 
 \entry{comaniciu}{article}{}
@@ -99,7 +102,9 @@
   \field{sortinit}{C}
   \field{title}{”Mean shift: A robust approach toward feature space
   analysis”}
-  \field{year}{2002.}
+  \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+  \field{year}{2002}
 \endentry
 
 \entry{fuku}{article}{}
@@ -115,7 +120,8 @@
   \field{sortinit}{F}
   \field{title}{”The estimation of the gradient of a density function, with
   applications in pattern recognition”}
-  \field{year}{1975.}
+  \field{journaltitle}{IEEE Transactions on Information Theory}
+  \field{year}{1975}
 \endentry
 
 \entry{otherwork}{article}{}
@@ -131,8 +137,8 @@
   \field{sortinit}{L}
   \field{title}{”Segmentation and Counting of WBCs and RBCs from Microscopic
   Blood Sample Images”}
-  \field{journaltitle}{MECS}
-  \field{year}{2016.}
+  \field{journaltitle}{MECS (http://www.mecs-press.org/)}
+  \field{year}{2016}
 \endentry
 
 \entry{water}{article}{}
@@ -146,7 +152,7 @@
   \strng{namehash}{PLCGDRC1}
   \strng{fullhash}{PLCGDRC1}
   \field{sortinit}{P}
-  \field{title}{Leucocyte classi- fication for leukaemia detection using image
+  \field{title}{Leucocyte classification for leukaemia detection using image
   processing techniques}
   \field{journaltitle}{Artificial Intelligence in Medicine 62(3), 179– 191}
   \field{year}{2014}
@@ -165,7 +171,7 @@
   \field{sortinit}{R}
   \field{title}{”Digital Image Processing.”}
   \field{journaltitle}{2nd ed. New Jersey: Prentice Hall, Inc.}
-  \field{year}{2002.}
+  \field{year}{2002}
 \endentry
 
 \entry{idbpaper}{article}{}
@@ -181,8 +187,8 @@
   \field{sortinit}{R}
   \field{title}{”ALL-IDB: THE ACUTE LYMPHOBLASTIC LEUKEMIA IMAGE DATABASE FOR
   IMAGE PROCESSING”}
-  \field{journaltitle}{IEEE}
-  \field{year}{2011.}
+  \field{journaltitle}{Image Processing (ICIP)}
+  \field{year}{2011}
 \endentry
 
 \entry{ann17}{article}{}
@@ -198,11 +204,12 @@
   \field{sortinit}{S}
   \field{title}{Counting and classification of white blood cell using
   Artificial Neural Network (ANN)}
-  \field{journaltitle}{IEEE}
+  \field{journaltitle}{Power Electronics, Intelligent Control and Energy
+  Systems (ICPEICES)}
   \field{year}{2017}
 \endentry
 
-\entry{edge}{book}{}
+\entry{edge}{article}{}
   \name{author}{1}{}{%
     {{}%
      {Umbaugh}{U.}%
@@ -214,7 +221,8 @@
   \strng{fullhash}{USE1}
   \field{sortinit}{U}
   \field{title}{Digital image processing and analysis : human and computer
-  vision applications with CVIPtools (2nd ed.)}
+  vision applications with CVIPtools}
+  \field{journaltitle}{Journal of Electronic Imaging}
   \field{year}{2010}
 \endentry
 

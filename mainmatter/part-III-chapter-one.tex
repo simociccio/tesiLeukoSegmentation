@@ -78,8 +78,8 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \end{center}
 \end{figure}
 
-As it possible to see, between the two images \ref{fig:fig8} and \ref{fig:fig9} there are some differences. The more visible difference is the bigger presence of agglomerate of small areas that create a kind of cell in the first segmentation. This is happened because it was an artefact caused by the Giemsa stain method, but in our approach we can discriminate all this little areas going to remove them because the over-segmentation of this kind (where there are only little areas) means that isn't a leukocyte but only a stain of colour. The result of the counting in this case is 29. 
-Working with cropped images we obtain a better result because we have to analyse less cells and as a consequence we have an increase of the speed as is explained in the table \ref{statistics}.
+As it possible to see, between the two images \ref{fig:fig8} and \ref{fig:fig9} there are some differences. The more visible difference is the bigger presence of agglomerate of small areas that create a kind of cell in the first segmentation. This happened because it was an artefact caused by the Giemsa stain method, but in our approach we can discriminate all this little areas going to remove them because the over-segmentation of this kind (where there are only little areas) means that it is not a leukocyte but only a stain of colour. The result of the counting in this case is 29. 
+Working with cropped images we obtain a better result because we have to analyse less cells and as a consequence we have an increase of the speed as it is explained in the table \ref{statistics}.
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -102,17 +102,95 @@ image 18 & yes & 1.717642 & 3/3 \\
 \caption{Statistics result}
 \label{statistics}
 \end{table}
-The table shows only the images where is present the worst case of overlap and clump between the cells. The images where is not present any kind of contact between the cells are well segmented with no problem of over-segmentation. In the images  \ref{fig:noover}, \ref{fig:nooverseg} there is an example of segmentation of six cells without any kind of over-segmentation or division. This is only an example but our implementation works very well with all the images with no overlapped cells. In this case is not useful the mean shift application because the cells are well distant from their selves. This means that the computational cost is very less then the version with the mean shift application (total time $<$ 1 second).
+The table shows only the images where is present the worst case of overlap and clump between the cells. The images where is not present any kind of contact between the cells are well segmented with no problem of over-segmentation with an accuracy of 100\%. In the images  \ref{fig:noover}, \ref{fig:nooverseg} there is an example of segmentation of six cells without any kind of over-segmentation or division. This is only an example but our implementation works very well with all the images with no overlapped cells. In this case we do not need the mean shift application because the cells are well distant from themselves. This means that the computational cost is very less then the version with the mean shift application (total time $<$ 1 second).
 
 \section{Related works}
-Comparing our work with another that obtain the best result using our same dataset \cite{otherwork}, is evident confronting the results where is present a clump or an overlap between the cells that our results are better. In this work the WBC counting is done by counting a number of connected components but is not present a method to divide the clumped cells. We obtain another similar result when we confront our work with a previous work doing in the Cagliari University \cite{dirub}. Also in this work the clumped and the overlapped cells are not well segmented.
+Checking the results in presence of clumps or cells overlap, our obtained results are better if we compare them with the results of another work that uses the same dataset \cite{otherwork}. In this work the WBC counting is performed by counting a number of connected components but it is not present a method to divide the clumped cells. We obtain a very close result if we compare our system with a previous work proposed in \cite{dirub} even though in this work the clumped and the overlapped cells are not well segmented. To evaluate the results, we compared ours with the results obtained in \cite{water} in term of accuracy. 
+\begin{table}
+\begin{tabular}{|c|c|c|}
+\hline
+number image &  accuracy related work (in \%) & accuracy our work (in \%)\\ 
+1 &  55 & 100 \\ 
+\hline
+2 &  100 & 83 \\ 
+\hline 
+3 &  91 & 100 \\ 
+\hline
+4 &  57 & 86 \\ 
+\hline
+5 &  79 & 100 \\ 
+\hline
+6 &  100 & 86 \\ 
+\hline
+7 &  100 & 100 \\ 
+\hline
+8 &  94 & 94 \\ 
+\hline
+9 &  100 & 100 \\ 
+\hline
+10 &  100 & 100 \\ 
+\hline
+11 &  80 & 100 \\ 
+\hline
+12 &  100 & 94 \\ 
+\hline
+13 &  70 & 100 \\ 
+\hline
+14 &  60 & 100 \\ 
+\hline
+15 &  100 & 100 \\ 
+\hline
+16 &  100 & 95 \\ 
+\hline
+17 &  100 & 100 \\ 
+\hline
+18 &  100 & 93 \\ 
+\hline
+19 &  100 & 91 \\ 
+\hline
+20 &  100 & 100 \\ 
+\hline
+21 &  100 & 100 \\ 
+\hline
+22 &  100 & 100 \\ 
+\hline
+23 &  100 & 100 \\ 
+\hline
+24 &  100 & 100 \\ 
+\hline
+25 &  100 & 100 \\ 
+\hline
+26 &  100 & 100 \\ 
+\hline
+27 &  100 & 100 \\ 
+\hline
+28 &  100 & 100 \\ 
+\hline
+29 &  100 & 100 \\ 
+\hline
+30 &  100 & 100 \\ 
+\hline
+31 &  100 & 100 \\ 
+\hline
+32 &  100 & 100 \\ 
+\hline
+33 &  100 & 100 \\
+\hline
+\end{tabular} 
+\caption{Performance of the proposed method for WBCs identification}
+\label{resulttab}
+\end{table}
+Taking a look on the results showed in table \ref{resulttab} it is evident that our worst score (86\%) is better than the worst result of the related work (55\%). In this case the images are composed of significant overlaps between leukocytes, which are difficult to find even for human experts pathologists.
+
+
+
 
 \section{Conclusions and future works}
-The dissertation proposed an innovative white blood cell recognition and segmentation. It was implemented using some notions already known in literature but never applied in this field. Combining them we obtain a new innovative method in which the major innovation is the use of the Vector field convolution in union to the mean shift and the skeleton function to obtain a result better of the watershed.
+The dissertation proposed an innovative white blood cell recognition and segmentation system. It was implemented using some notions already known in literature but never applied in this field. Combining them we obtain a new innovative method in which the major innovation is the use of the Vector field convolution in union to the mean shift and the skeleton function to obtain a result better than the watershed method in terms of cells separation from clumps.
 
 \bigskip
 
-The algorithm obtains good results where we analyse images where is not present the granulocyte, because the shape of its nucleus produce a lot of over-segmentation.\ref{fig:grangray}\ref{fig:gran}
+The algorithm produces very good results where we analyse images where granulocytes are missing, because the shape of its nucleus produces a not properly segmentation; however we can use it as a base for a detection system \ref{fig:grangray} \ref{fig:gran}
 \begin{figure}
 \begin{center}
 		\includegraphics[scale=0.5]{img/final/meangran.png}
@@ -122,18 +200,17 @@ The algorithm obtains good results where we analyse images where is not present 
 \end{figure}
 \begin{figure}
 \begin{center}
-		\includegraphics[scale=0.5]{img/final/fingran.png}
-		\caption{Over-segmentation caused by the granulocyte}
+		\includegraphics[scale=0.5]{img/final/fingran1.png}
+		\caption{Granulocyte segmentation}
 		\label{fig:gran}
 \end{center}
 \end{figure}
-
-The most important points that we focused in this thesis can be listed in four sections:
+The most important points that we focused in this thesis can be listed as follows:
 \bigskip
 
 \begin{minipage}{\linewidth}
 \begin{enumerate}
-\item preprocessing using the mean shift algorithm in order to delete all the differences of colour inside the cells;
+\item preprocessing by using the mean shift algorithm in order to reduce all the differences of colour inside the cells;
 \item extrapolation of the right and left component of the VFC force;
 \item application of the skeleton in order to separate the overlapped cells;
 \item recognize and count of the cells.
@@ -142,8 +219,8 @@ The most important points that we focused in this thesis can be listed in four s
 
 \bigskip
 
-Our method demonstrates that at this moment is better than everyone algorithm existing in literature. The only problem is the less robustness causing by the low quality images and the over-segmentation caused by the granulocytes. But as the literature says, this is the complex field in histologic image segmentation.
+Our method demonstrates that, at this moment, it is better than every algorithm existing in literature. The only remaining issues are that it cannot be too robust, due to the low quality of images and the over-segmentation caused by the granulocytes. But as the literature says, this is the complex field in haematological image segmentation.
 
 \bigskip
 
-Is possible to resolve this robustness problem. As future works we want to implement a new kind of region merging in order to delete all the over-segmentation caused by the granulocyte and a new points liking function to remove the skeleton side of the algorithm and use only the informations give by the VFC components. 
+Future works will include to propose a new kind of region merging algorithm in order to delete all the over-segmentation,  an improvement to obtain a better segmentation of granulocytes and a new points-linking function to remove the skeleton side of the algorithm and use only the information given by the VFC components.

@@ -1,9 +1,8 @@
 \chapter{The proposed approach}
-In the thesis work we propose a new and innovative system for the white blood cells segmentation and counting based on the Vector Field Convolution.
+In the thesis we propose a new and innovative system for the white blood cells segmentation and counting based on the Vector Field Convolution.
+
 \bigskip
-In the diagram \ref{fig:diag} is showed the scheme of the proposed system.
-\bigskip
-In the first phase we acquire the image containing the cells. In the second step is applied the mean-shift method in order to obtain a better image for the segmentation. In the third step we apply the VFC method in order to obtain the intensity image. The fourth step transform the intensity image in a grade image where each pixel has a specific direction. The fifth and the sixth steps are parallels. In the fifth step we calculate the external energy and the  distance transform on the grade image. In the sixth step is applied the median filter on the results of the fifth step. The seventh step shows the overlay between the two results of the sixth step in order to detect only the leukocytes. The eighth step applies the skeleton method in order to do an initial segmentation. The ninth step applies the region merging function to segment and count the cells in the image. 
+In the diagram \ref{fig:diag} the scheme of the proposed system is showed. In the first phase we acquire the image containing the cells. In the second step the mean-shift method is applied in order to obtain a better image for the segmentation. In the third step we apply the VFC method in order to obtain the intensity image. The fourth step transform the intensity image in a grade image where each pixel has a specific direction. The fifth and the sixth steps are parallels. In the fifth step we calculate the external energy and the  distance transform on the grade image. In the sixth step the median filter is applied on the results of the fifth step. The seventh step shows the overlay between the two results of the sixth step in order to detect only the leukocytes. The eighth step applies the skeleton method in order to do an initial segmentation. The ninth step applies the region merging function to segment and finally count the cells in the image. 
 \begin{figure}
 	\begin{center}
 		\centering
