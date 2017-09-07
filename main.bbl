@@ -19,7 +19,7 @@
 \entry{VFC}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {Bing~Li}{B.~L.}%
+     {Bing~L.}{B.~L.}%
      {Scott~T.}{S.~T.}%
      {}{}%
      {}{}}%
@@ -29,99 +29,111 @@
   \field{sortinit}{B}
   \field{title}{Active Contour External Force Using Vector Field Convolution
   for Image Segmentation}
-  \field{journaltitle}{Acton}
+  \field{journaltitle}{Acton, vol. 16, pp. 2096 - 2106}
   \field{year}{2007}
 \endentry
 
-\entry{GVF}{article}{}
+\entry{comaniciu}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {C.~Xu}{C.~X.}%
-     {J.~L.~Prince}{J.~L.~P.}%
+     {D.~Comaniciu}{D.~C.}%
+     {P.~Meer}{P.~M.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{CXJLP1}
-  \strng{fullhash}{CXJLP1}
-  \field{sortinit}{C}
-  \field{title}{Generalized gradient vector flow external forces for active
-  contours}
-  \field{journaltitle}{Signal Process., vol. 71, pp. 131–139}
-  \field{year}{1998}
+  \strng{namehash}{DCPM1}
+  \strng{fullhash}{DCPM1}
+  \field{sortinit}{D}
+  \field{title}{”Mean shift: A robust approach toward feature space
+  analysis”}
+  \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence, vol. 24, pp. 603 - 619}
+  \field{year}{2002}
 \endentry
 
 \entry{dirub}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {Cecilia Di~Ruberto}{C.~D.~R.}%
-     {Lorenzo~Putzu}{L.~P.}%
+     {Di~Ruberto~C.}{D.~R.~C.}%
+     {Putzu~L.}{P.~L.}%
      {}{}%
-     {Andrea~Loddo}{A.~L.}}%
+     {Loddo~A.}{L.~A.}}%
   }
-  \strng{namehash}{CDRALLP1}
-  \strng{fullhash}{CDRALLP1}
-  \field{sortinit}{C}
+  \strng{namehash}{DRCLAPL1}
+  \strng{fullhash}{DRCLAPL1}
+  \field{sortinit}{D}
   \field{title}{”A Multiple Classifier Learning by Sampling System for White
   Blood Cells Segmentation”}
-  \field{journaltitle}{CAIP}
+  \field{journaltitle}{proceedings in CAIP, vol. 9257, pp. 415 - 425}
   \field{year}{2015}
 \endentry
 
-\entry{cheng}{article}{}
+\entry{edge}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {Cheng}{C.}%
-     {}{}%
+     {E.}{E.}%
+     {Umbaugh~Scott}{U.~S.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{C1}
-  \strng{fullhash}{C1}
-  \field{sortinit}{C}
-  \field{title}{”Mean shift, mode seeking, and clustering”}
-  \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}
-  \field{year}{1995}
+  \strng{namehash}{EUS1}
+  \strng{fullhash}{EUS1}
+  \field{sortinit}{E}
+  \field{title}{Digital image processing and analysis : human and computer
+  vision applications with CVIPtools}
+  \field{journaltitle}{Journal of Electronic Imaging, pp. 1 - 977}
+  \field{year}{2010}
 \endentry
 
-\entry{comaniciu}{article}{}
-  \name{author}{2}{}{%
+\entry{Threshold}{article}{}
+  \name{author}{1}{}{%
     {{}%
-     {Comaniciu}{C.}%
-     {D.}{D.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Meer}{M.}%
-     {P.}{P.}%
+     {Gonzalez R.~C.}{G.~R.~C.}%
+     {Woods R.~E.}{W.~R.~E.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{CDMP1}
-  \strng{fullhash}{CDMP1}
-  \field{sortinit}{C}
-  \field{title}{”Mean shift: A robust approach toward feature space
-  analysis”}
-  \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}
+  \strng{namehash}{GRCWRE1}
+  \strng{fullhash}{GRCWRE1}
+  \field{sortinit}{G}
+  \field{title}{”Digital Image Processing”}
+  \field{journaltitle}{2nd ed. New Jersey: Prentice Hall, Inc., pp. 1 - 954}
   \field{year}{2002}
 \endentry
 
 \entry{fuku}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {Fukunaga}{F.}%
      {K.}{K.}%
+     {Fukunaga}{F.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{FK1}
-  \strng{fullhash}{FK1}
-  \field{sortinit}{F}
+  \strng{namehash}{KF1}
+  \strng{fullhash}{KF1}
+  \field{sortinit}{K}
   \field{title}{”The estimation of the gradient of a density function, with
   applications in pattern recognition”}
-  \field{journaltitle}{IEEE Transactions on Information Theory}
+  \field{journaltitle}{IEEE Transactions on Information Theory, vol. 21, pp. 32
+  - 40}
   \field{year}{1975}
+\endentry
+
+\entry{idbpaper}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Labati R.~D.}{L.~R.~D.}%
+     {Scotti~F.}{S.~F.}%
+     {}{}%
+     {Piuri~V.}{P.~V.}}%
+  }
+  \strng{namehash}{LRDPVSF1}
+  \strng{fullhash}{LRDPVSF1}
+  \field{sortinit}{L}
+  \field{title}{”ALL-IDB: THE ACUTE LYMPHOBLASTIC LEUKEMIA IMAGE DATABASE FOR
+  IMAGE PROCESSING”}
+  \field{journaltitle}{proceedings in Image Processing (ICIP), pp. 2045-2048}
+  \field{year}{2011}
 \endentry
 
 \entry{otherwork}{article}{}
@@ -130,14 +142,15 @@
      {Lata A.~Bhavnani}{L.~A.~B.}%
      {Mahasweta J.~Joshi}{M.~J.~J.}%
      {}{}%
-     {Udesang K.~Jaliya2}{U.~K.~J.}}%
+     {Udesang K.~Jaliya}{U.~K.~J.}}%
   }
   \strng{namehash}{LABUKJMJJ1}
   \strng{fullhash}{LABUKJMJJ1}
   \field{sortinit}{L}
   \field{title}{”Segmentation and Counting of WBCs and RBCs from Microscopic
   Blood Sample Images”}
-  \field{journaltitle}{MECS (http://www.mecs-press.org/)}
+  \field{journaltitle}{proceedings in MECS (http://www.mecs-press.org/), vol.
+  11, pp. 32 - 40}
   \field{year}{2016}
 \endentry
 
@@ -154,76 +167,46 @@
   \field{sortinit}{P}
   \field{title}{Leucocyte classification for leukaemia detection using image
   processing techniques}
-  \field{journaltitle}{Artificial Intelligence in Medicine 62(3), 179– 191}
+  \field{journaltitle}{Artificial Intelligence in Medicine, vol. 62 , pp. 179 -
+  191}
   \field{year}{2014}
-\endentry
-
-\entry{Threshold}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {R.~C.~Gonzales}{R.~C.~G.}%
-     {R.~E.~Woods}{R.~E.~W.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{RCGREW1}
-  \strng{fullhash}{RCGREW1}
-  \field{sortinit}{R}
-  \field{title}{”Digital Image Processing.”}
-  \field{journaltitle}{2nd ed. New Jersey: Prentice Hall, Inc.}
-  \field{year}{2002}
-\endentry
-
-\entry{idbpaper}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Ruggero Donida~Labati}{R.~D.~L.}%
-     {Fabio~Scotti}{F.~S.}%
-     {}{}%
-     {Vincenzo~Piuri}{V.~P.}}%
-  }
-  \strng{namehash}{RDLVPFS1}
-  \strng{fullhash}{RDLVPFS1}
-  \field{sortinit}{R}
-  \field{title}{”ALL-IDB: THE ACUTE LYMPHOBLASTIC LEUKEMIA IMAGE DATABASE FOR
-  IMAGE PROCESSING”}
-  \field{journaltitle}{Image Processing (ICIP)}
-  \field{year}{2011}
 \endentry
 
 \entry{ann17}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {Shubham~Manik}{S.~M.}%
-     {Nikhil~Vadera}{N.~V.}%
+     {Shubham~M.}{S.~M.}%
+     {Nikhil~V.}{N.~V.}%
      {}{}%
-     {Lalit Mohan~Saini}{L.~M.~S.}}%
+     {Lalit M.~S.}{L.~M.~S.}}%
   }
   \strng{namehash}{SMLMSNV1}
   \strng{fullhash}{SMLMSNV1}
   \field{sortinit}{S}
   \field{title}{Counting and classification of white blood cell using
   Artificial Neural Network (ANN)}
-  \field{journaltitle}{Power Electronics, Intelligent Control and Energy
-  Systems (ICPEICES)}
+  \field{journaltitle}{proceedings in Power Electronics, Intelligent Control
+  and Energy Systems (ICPEICES), pp. 1 - 5}
   \field{year}{2017}
 \endentry
 
-\entry{edge}{article}{}
+\entry{website:IDB}{misc}{}
   \name{author}{1}{}{%
     {{}%
-     {Umbaugh}{U.}%
-     {Scott~E.}{S.~E.}%
+     {Unimi}{U.}%
+     {}{}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{USE1}
-  \strng{fullhash}{USE1}
+  \strng{namehash}{U1}
+  \strng{fullhash}{U1}
   \field{sortinit}{U}
-  \field{title}{Digital image processing and analysis : human and computer
-  vision applications with CVIPtools}
-  \field{journaltitle}{Journal of Electronic Imaging}
-  \field{year}{2010}
+  \field{title}{ALL-IDB Acute Lymphoblastic Leukemia Image Database for Image
+  Processing}
+  \verb{url}
+  \verb https://homes.di.unimi.it/scotti/all/
+  \endverb
+  \field{year}{2005}
 \endentry
 
 \entry{website:wiki}{misc}{}
@@ -264,23 +247,38 @@
   \warn{\item Invalid format of field 'month'}
 \endentry
 
-\entry{website:IDB}{misc}{}
+\entry{GVF}{article}{}
   \name{author}{1}{}{%
     {{}%
-     {unimi}{u.}%
-     {}{}%
+     {Xu~C.}{X.~C.}%
+     {Prince J.~L.}{P.~J.~L.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{u1}
-  \strng{fullhash}{u1}
-  \field{sortinit}{U}
-  \field{title}{ALL-IDB Acute Lymphoblastic Leukemia Image Database for Image
-  Processing}
-  \verb{url}
-  \verb https://homes.di.unimi.it/scotti/all/
-  \endverb
-  \field{year}{2005}
+  \strng{namehash}{XCPJL1}
+  \strng{fullhash}{XCPJL1}
+  \field{sortinit}{X}
+  \field{title}{Generalized gradient vector flow external forces for active
+  contours}
+  \field{journaltitle}{Signal Process., vol. 71, pp. 131 - 139}
+  \field{year}{1998}
+\endentry
+
+\entry{cheng}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Y.}{Y.}%
+     {Cheng}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YC1}
+  \strng{fullhash}{YC1}
+  \field{sortinit}{Y}
+  \field{title}{”Mean shift, mode seeking, and clustering”}
+  \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence, vol. 17, pp. 790 - 799}
+  \field{year}{1995}
 \endentry
 
 \lossort

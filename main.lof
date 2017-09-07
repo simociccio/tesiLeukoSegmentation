@@ -26,23 +26,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Median filter on degrees image\relax }}{29}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces bwdist applied on degrees image\relax }}{30}{figure.caption.13}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Bwdist applied on degrees image\relax }}{30}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.8}{\ignorespaces External energy result\relax }}{32}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.9}{\ignorespaces External energy image of leukocytes without red blood cells\relax }}{32}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces edges and region\relax }}{32}{figure.caption.16}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Edges and region\relax }}{32}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces overlay of figures \ref {fig:Pmedangle} and \ref {fig:Pmedonlyleu}\relax }}{33}{figure.caption.17}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Overlay of figures \ref {fig:Pmedangle} and \ref {fig:Pmedonlyleu}\relax }}{33}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces only leukocytes edges\relax }}{33}{figure.caption.18}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Only leukocytes edges\relax }}{33}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces skeleton of leukocytes with irregular branches\relax }}{34}{figure.caption.19}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Skeleton of leukocytes with irregular branches\relax }}{34}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces skeleton of leukocytes with no spurious branches\relax }}{35}{figure.caption.20}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Skeleton of leukocytes with no spurious branches\relax }}{35}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces final leukocytes segmentation \relax }}{36}{figure.caption.21}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Final leukocytes segmentation \relax }}{36}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.16}{\ignorespaces (a) All the regions, (b) Only big regions\relax }}{37}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
@@ -60,9 +60,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Merging of little area to count the number of leukocytes\relax }}{43}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Granulocite after Mean shift application\relax }}{44}{figure.caption.29}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Leukocytes after Mean shift application\relax }}{44}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Granulocite after Mean shift application\relax }}{44}{figure.caption.30}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Segmented leukocytes\relax }}{44}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Granulocite after Mean shift application\relax }}{47}{figure.caption.33}
 \defcounter {refsection}{0}\relax 

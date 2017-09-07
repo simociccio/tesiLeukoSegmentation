@@ -66,14 +66,14 @@ The last two figures \ref{fig:fig8} \ref{fig:fig9} show the real result of the s
 \begin{figure}
 \begin{center}
 		\includegraphics[scale=0.3]{img/final/nooverlap.png}
-		\caption{Granulocite after Mean shift application}
+		\caption{Leukocytes after Mean shift application}
 		\label{fig:noover}
 \end{center}
 \end{figure}
 \begin{figure}
 \begin{center}
 		\includegraphics[scale=0.3]{img/final/nooverlapseg.png}
-		\caption{Granulocite after Mean shift application}
+		\caption{Segmented leukocytes}
 		\label{fig:nooverseg}
 \end{center}
 \end{figure}
@@ -109,7 +109,8 @@ Checking the results in presence of clumps or cells overlap, our obtained result
 \begin{table}
 \begin{tabular}{|c|c|c|}
 \hline
-number image &  accuracy related work (in \%) & accuracy our work (in \%)\\ 
+number image &  accuracy of related system (\cite{water}) (in \%) & accuracy of our system (in \%)\\ 
+\hline
 1 &  55 & 100 \\ 
 \hline
 2 &  100 & 83 \\ 
@@ -175,6 +176,9 @@ number image &  accuracy related work (in \%) & accuracy our work (in \%)\\
 32 &  100 & 100 \\ 
 \hline
 33 &  100 & 100 \\
+\hline
+\hline
+tot. avg. &  90.5 & 94.6 \\
 \hline
 \end{tabular} 
 \caption{Performance of the proposed method for WBCs identification}
